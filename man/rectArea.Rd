@@ -6,9 +6,6 @@
 \alias{srA}
 \alias{mrA}
 \alias{drA}
-\alias{srA}
-\alias{mrA}
-\alias{drA}
 \title{Given rectangle code return area in square kilometers or nautical miles}
 \usage{
 rA(r, scale = "nmi")

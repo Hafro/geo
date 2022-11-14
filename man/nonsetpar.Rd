@@ -4,8 +4,10 @@
 \name{nonsetpar}
 \alias{nonsetpar}
 \title{Some parameter settings.}
-\format{The format is: chr [1:8] "omd" "oma" "omi" "fin" "fig" "mfcol"
-"mfrow" ...}
+\format{
+The format is: chr [1:8] "omd" "oma" "omi" "fin" "fig" "mfcol"
+"mfrow" ...
+}
 \description{
 Needs elaboration or to be removed.
 }

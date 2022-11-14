@@ -31,4 +31,3 @@ Internal to the geo-contour-functions, needs elaboration.
 Called by \code{\link{geocontour}} and
 \code{\link{geocontour.fill}}.
 }
-\keyword{~kwd1}

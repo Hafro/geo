@@ -4,9 +4,11 @@
 \name{gbdypi.500}
 \alias{gbdypi.500}
 \title{GEBCO 500 m isobath in the N-Atlantic.}
-\format{A data frame with 16679 observations on the following 2 variables.
+\format{
+A data frame with 16679 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 GEBCO 500 m isobath in the N-Atlantic.
 }

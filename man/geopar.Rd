@@ -4,7 +4,9 @@
 \name{geopar}
 \alias{geopar}
 \title{Parameters for the geo plot functions.}
-\format{A list of parameters.}
+\format{
+A list of parameters.
+}
 \description{
 Parameters for the geo plot functions.
 }

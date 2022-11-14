@@ -4,7 +4,8 @@
 \name{reg.lump}
 \alias{reg.lump}
 \title{Lumpfish regions}
-\format{The format is: List of 8 $ Faxafloi :'data.frame': 214 obs. of 2
+\format{
+The format is: List of 8 $ Faxafloi :'data.frame': 214 obs. of 2
 variables: ..$ lat: num [1:214] 64.8 64.7 64.7 64.7 64.7 ...  ..$ lon: num
 [1:214] -23.9 -23.9 -23.8 -23.8 -23.7 ...  $ Breidafjordur outer
 :'data.frame': 53 obs. of 2 variables: ..$ lat: num [1:53] 65.5 65.5 65.5
@@ -21,7 +22,8 @@ lon: num [1:261] -14.6 -14.6 -14.8 -14.9 -15 ...  $ Eastfjords
 :'data.frame': 298 obs. of 2 variables: ..$ lat: num [1:298] 64.4 64.4 64.5
 64.5 64.5 ...  ..$ lon: num [1:298] -14.5 -14.5 -14.5 -14.5 -14.5 ...  $
 Sudurland :'data.frame': 402 obs. of 2 variables: ..$ lat: num [1:402] 64.1
-64.1 64 64 64 ...  ..$ lon: num [1:402] -22.7 -22.7 -22.7 -22.7 -22.7 ...}
+64.1 64 64 64 ...  ..$ lon: num [1:402] -22.7 -22.7 -22.7 -22.7 -22.7 ...
+}
 \description{
 List of areas demarkated by the lumpfish regulation and the main part of 500
 m isobath around Iceland (with a simple transverse line over the

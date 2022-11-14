@@ -4,8 +4,7 @@
 \alias{labels2}
 \title{Label plots}
 \usage{
-labels2(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1), nx = 4,
-  fill = F)
+labels2(cont, digits, colors, xlim = c(0, 1), ylim = c(0, 1), nx = 4, fill = F)
 }
 \arguments{
 \item{cont}{Contour ?}

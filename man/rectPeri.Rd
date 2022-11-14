@@ -6,9 +6,6 @@
 \alias{srPeri}
 \alias{mrPeri}
 \alias{drPeri}
-\alias{srPeri}
-\alias{mrPeri}
-\alias{drPeri}
 \title{Given rectangle code return perimeter as a polygon in lat lon}
 \usage{
 rPeri(r)

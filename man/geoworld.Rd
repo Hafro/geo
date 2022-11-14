@@ -4,10 +4,22 @@
 \alias{geoworld}
 \title{Plots rough outline of the world.}
 \usage{
-geoworld(regions = ".", exact = FALSE, boundary = TRUE, fill = FALSE,
-  color = 1, lwd = 1, lty = 1, plot = TRUE, type = "l", pch = ".",
-  database = "world", return.data = FALSE, outside = FALSE,
-  allowed.size = 80000)
+geoworld(
+  regions = ".",
+  exact = FALSE,
+  boundary = TRUE,
+  fill = FALSE,
+  color = 1,
+  lwd = 1,
+  lty = 1,
+  plot = TRUE,
+  type = "l",
+  pch = ".",
+  database = "world",
+  return.data = FALSE,
+  outside = FALSE,
+  allowed.size = 80000
+)
 }
 \arguments{
 \item{regions}{Allows plotting only a certain part of the world to speed up
@@ -62,7 +74,7 @@ plot are drawn.
 
 \examples{
 
-\dontrun{     geoplot(xlim = c(0, -53), ylim = c(53, 75))
+   geoplot(xlim = c(0, -53), ylim = c(53, 75))
      geoworld()
 
      # Should plot in all countries who intersect the plot draw
@@ -72,7 +84,7 @@ plot are drawn.
 # worldHires is a very detailed database of coastlines from the 
 # package mapdata.  Could be problematic if used with fill = TRUE)
 # Allowed.size is the maximum allowed size of polygons.  
-library(map) # world coastlines and programs 
+library(maps) # world coastlines and programs 
 library(mapdata) # more detailed coastlines
 geoplot(xlim = c(20, 70), ylim = c(15, 34))
 geoworld(database = "worldHires", fill = TRUE, col = 30, allowed.size = 1e5)
@@ -88,7 +100,7 @@ geoworld(database = "world", fill = TRUE, col = 30) #the plot fails.
 geoplot(xlim = c(-10, 70), ylim = c(71, 81), 
   dlat = 2, dlon = 10, projection = "Lambert")
 geoworld(database = "world", fill = TRUE, col = 30) 
-}
+
 }
 \seealso{
 \code{\link{geoplot}}, \code{\link{fill.outside.border}},

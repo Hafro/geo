@@ -4,8 +4,16 @@
 \alias{geolines}
 \title{Add lines to current plot initialized by geoplot.}
 \usage{
-geolines(lat, lon = 0, col = 1, lwd = 0, lty = 0, nx = 1,
-  outside = FALSE, return.data = FALSE)
+geolines(
+  lat,
+  lon = 0,
+  col = 1,
+  lwd = 0,
+  lty = 0,
+  nx = 1,
+  outside = FALSE,
+  return.data = FALSE
+)
 }
 \arguments{
 \item{lat}{Latitude of data. ( or x coordinate)}

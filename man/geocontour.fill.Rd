@@ -5,14 +5,38 @@
 \title{geocontour.fill plots colored or black and white contours on a graph made by
 geoplot.}
 \usage{
-geocontour.fill(grd, z, levels = NULL, nlevels = 0, cex = 0.7,
-  digits = 1, col = NULL, working.space = 0, labels = 1, ratio = 1000,
-  only.positive = FALSE, fill = 0, maxcol = 155, white = FALSE,
-  label.location = 0, labels.only = FALSE, bordercheck = FALSE,
-  maxn = 10000, bcrat = 0.05, limits = NULL, col.names = c("lon",
-  "lat"), minsym = "<", label.resolution = 0, labtxt = NULL, boxcol = 0,
-  first.color.trans = TRUE, mai = c(0, 1, 0, 1), leftrat = 0.1,
-  labbox = TRUE, csi = NULL)
+geocontour.fill(
+  grd,
+  z,
+  levels = NULL,
+  nlevels = 0,
+  cex = 0.7,
+  digits = 1,
+  col = NULL,
+  working.space = 0,
+  labels = 1,
+  ratio = 1000,
+  only.positive = FALSE,
+  fill = 0,
+  maxcol = 155,
+  white = FALSE,
+  label.location = 0,
+  labels.only = FALSE,
+  bordercheck = FALSE,
+  maxn = 10000,
+  bcrat = 0.05,
+  limits = NULL,
+  col.names = c("lon", "lat"),
+  minsym = "<",
+  label.resolution = 0,
+  labtxt = NULL,
+  boxcol = 0,
+  first.color.trans = TRUE,
+  mai = c(0, 1, 0, 1),
+  leftrat = 0.1,
+  labbox = TRUE,
+  csi = NULL
+)
 }
 \arguments{
 \item{grd}{List with components \$lat and \$lon (or \$x, \$y) defining the

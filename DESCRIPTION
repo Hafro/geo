@@ -8,9 +8,10 @@ Maintainer: Sigurdur Thor Jonsson <sigurdur@hafro.is>
 Depends: maps, mapdata, R (>= 2.10.0)
 Imports: splines, methods, utils, grDevices, graphics, stats
 LazyData: yes
+LazyDataCompression:gzip
 Description: Used by Hafro staff to draw maps showing the distribution of
   fishing intensity and catches, and of survey data for Icelandic fish stocks.
   Potentially useful for others.
 License: GPL (>= 2)
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 7.2.2

@@ -4,10 +4,29 @@
 \alias{pointkriging}
 \title{interpolates regularly spaced data on a grid.}
 \usage{
-pointkriging(lat, lon, z, xgr, vagram, maxnumber = 16, scale = "km",
-  option = 1, maxdist = 0, rat = 3, nb = 8, set = 0, areas = 0,
-  varcalc = F, sill = 0, minnumber = 2, suboption = 1, outside = T,
-  degree = 0, lognormal = F, zeroset = F)
+pointkriging(
+  lat,
+  lon,
+  z,
+  xgr,
+  vagram,
+  maxnumber = 16,
+  scale = "km",
+  option = 1,
+  maxdist = 0,
+  rat = 3,
+  nb = 8,
+  set = 0,
+  areas = 0,
+  varcalc = F,
+  sill = 0,
+  minnumber = 2,
+  suboption = 1,
+  outside = T,
+  degree = 0,
+  lognormal = F,
+  zeroset = F
+)
 }
 \arguments{
 \item{lat}{Latitude of datapoints.}

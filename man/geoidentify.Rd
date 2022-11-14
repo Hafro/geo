@@ -4,8 +4,17 @@
 \alias{geoidentify}
 \title{Identifies points on plots using lat and lon coordinates.}
 \usage{
-geoidentify(lat, lon = NULL, labels = 1, n = 0, plot = TRUE,
-  atpen = TRUE, offset = 0.5, col = 1, cex = 1)
+geoidentify(
+  lat,
+  lon = NULL,
+  labels = 1,
+  n = 0,
+  plot = TRUE,
+  atpen = TRUE,
+  offset = 0.5,
+  col = 1,
+  cex = 1
+)
 }
 \arguments{
 \item{lat, lon}{Coordinates of points.  The coordinates can be given by two

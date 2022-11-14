@@ -4,9 +4,11 @@
 \name{island}
 \alias{island}
 \title{Icelandic coastline.}
-\format{A data frame with 1323 observations on the following 2 variables.
+\format{
+A data frame with 1323 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \source{
 Unknown.
 }

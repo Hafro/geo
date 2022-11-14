@@ -4,15 +4,46 @@
 \alias{geoplot}
 \title{Plots lat and lon coordinates using Mercator or Lambert transformation.}
 \usage{
-geoplot(lat = NULL, lon = 0, type = "p", pch = "*", xlim = c(0, 0),
-  ylim = c(0, 0), b0 = 65, r = 1.05, country = "default", xlab = " ",
-  ylab = " ", option = "cut", grid = TRUE, new = FALSE, cont = FALSE,
-  cex = 0.9, col = 1, lcont = c(0.13, 0.21), plotit = TRUE,
-  reitur = FALSE, smareitur = FALSE, reittext = FALSE, cexrt = 0.7,
-  csirt = NULL, axratio = 1, lwd = 0, lwd1 = 0, locator = FALSE,
-  axlabels = TRUE, projection = "Mercator", b1 = b0, dlat = 0,
-  dlon = 0, jitter = 0, zoom, csi = NULL, xaxdist = 0.2,
-  yaxdist = 0.3)
+geoplot(
+  lat = NULL,
+  lon = 0,
+  type = "p",
+  pch = "*",
+  xlim = c(0, 0),
+  ylim = c(0, 0),
+  b0 = 65,
+  r = 1.05,
+  country = "default",
+  xlab = " ",
+  ylab = " ",
+  option = "cut",
+  grid = TRUE,
+  new = FALSE,
+  cont = FALSE,
+  cex = 0.9,
+  col = 1,
+  lcont = c(0.13, 0.21),
+  plotit = TRUE,
+  reitur = FALSE,
+  smareitur = FALSE,
+  reittext = FALSE,
+  cexrt = 0.7,
+  csirt = NULL,
+  axratio = 1,
+  lwd = 0,
+  lwd1 = 0,
+  locator = FALSE,
+  axlabels = TRUE,
+  projection = "Mercator",
+  b1 = b0,
+  dlat = 0,
+  dlon = 0,
+  jitter = 0,
+  zoom,
+  csi = NULL,
+  xaxdist = 0.2,
+  yaxdist = 0.3
+)
 }
 \arguments{
 \item{lat, lon}{Latitude and longitude of data (or x and y coordinates),
@@ -308,7 +339,7 @@ geoplot(island, r = 1.2, type = "n", reitur = TRUE)
 x <- apply.shrink(data$torskur.stk, data$reitur, sum,
   names = c("reitur", "torskur.stk"))
 x1 <- r2d(x$reitur)
-geotext(x1, z = paste(x$reitur, round(x$torskur.stk, 1), sep = "\\n"))
+geotext(x1, z = paste(x$reitur, round(x$torskur.stk, 1), sep = "\n"))
 
 # Plot filled circles.  The color scheme used is the same as described
 # color 0 white, 1 black and 2 - 155 white-black see bwps
@@ -352,10 +383,10 @@ for (ar in yy) {
           angle = 45, csi = 0.1)
       }
       geotext(lat = c(65.2), lon = (-18), z = paste(month.abb[man],
-        round(sum(tmp2$catch, na.rm = TRUE)), sep = "\\n"), csi = 0.2)
+        round(sum(tmp2$catch, na.rm = TRUE)), sep = "\n"), csi = 0.2)
     }
     else {geotext(lat = c(65.2), lon = (-18),
-            z = paste(month.abb[man], "0", sep = "\\n"), csi = 0.2)}
+            z = paste(month.abb[man], "0", sep = "\n"), csi = 0.2)}
   }
   geotext(63, -10, ar, adj = 1, csi = 0.18)
   dev.off()

@@ -4,9 +4,11 @@
 \name{greenland}
 \alias{greenland}
 \title{Outline of Greenland.}
-\format{A data frame with 62416 observations on the following 2 variables.
+\format{
+A data frame with 62416 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 Outline of Greenland.
 }

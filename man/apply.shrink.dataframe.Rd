@@ -4,8 +4,18 @@
 \alias{apply.shrink.dataframe}
 \title{Apply functions to columns in a dataframe}
 \usage{
-apply.shrink.dataframe(data, name.x, name.ind, FUNS = NULL, NA.rm = FALSE,
-  resp.name = NULL, full.data.frame = FALSE, Set = NA, name.res, ...)
+apply.shrink.dataframe(
+  data,
+  name.x,
+  name.ind,
+  FUNS = NULL,
+  NA.rm = FALSE,
+  resp.name = NULL,
+  full.data.frame = FALSE,
+  Set = NA,
+  name.res,
+  ...
+)
 }
 \arguments{
 \item{data}{Input dataframe}

@@ -5,11 +5,27 @@
 \title{Function that fills rectangles or sub-rectangles according to the amount of
 fish calculated in them.}
 \usage{
-reitaplott(reitur, smareitur = NULL, z, levels = NULL, colors = NULL,
-  density = 1, maxcol = 155, nlevels = 6, white = FALSE,
-  border = FALSE, angle = 45, rotate = 0, digits = 0, cex = 0,
-  label.location = 0, labels.only = FALSE, col = 1, outside = TRUE,
-  mincol = NULL)
+reitaplott(
+  reitur,
+  smareitur = NULL,
+  z,
+  levels = NULL,
+  colors = NULL,
+  density = 1,
+  maxcol = 155,
+  nlevels = 6,
+  white = FALSE,
+  border = FALSE,
+  angle = 45,
+  rotate = 0,
+  digits = 0,
+  cex = 0,
+  label.location = 0,
+  labels.only = FALSE,
+  col = 1,
+  outside = TRUE,
+  mincol = NULL
+)
 }
 \arguments{
 \item{reitur}{Number of square.  If number of square >1000 the last digit

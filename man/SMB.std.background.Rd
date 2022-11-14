@@ -4,8 +4,16 @@
 \alias{SMB.std.background}
 \title{Standard background for the SMB.}
 \usage{
-SMB.std.background(depth, depthcol = 1, depthlty = 1, depthlwd = 1, eyjar,
-  depthlab, depthlabcsi = 0.12, ...)
+SMB.std.background(
+  depth,
+  depthcol = 1,
+  depthlty = 1,
+  depthlwd = 1,
+  eyjar,
+  depthlab,
+  depthlabcsi = 0.12,
+  ...
+)
 }
 \arguments{
 \item{depth}{Vector of isobaths to draw, default none}

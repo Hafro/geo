@@ -29,4 +29,3 @@ Call to \code{skipta.texta} could be replaced with a call to
 \seealso{
 Calls \code{\link{skipta.texta}}
 }
-\keyword{~kwd1}

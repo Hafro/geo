@@ -4,9 +4,11 @@
 \name{faeroes}
 \alias{faeroes}
 \title{Coastline of Faroe Islands}
-\format{A data frame with 2161 observations on the following 2 variables.
+\format{
+A data frame with 2161 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \source{
 Possibly from package \code{mapdata}.
 }

@@ -4,9 +4,11 @@
 \name{gbdypif.200}
 \alias{gbdypif.200}
 \title{GEBCO 200 m isobath around Iceland.}
-\format{A data frame with 914 observations on the following 2 variables:
+\format{
+A data frame with 914 observations on the following 2 variables:
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 Given in one polygon.
 }

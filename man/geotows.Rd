@@ -4,8 +4,15 @@
 \alias{geotows}
 \title{Plot tows as line segments}
 \usage{
-geotows(lat, lon, lat1, lon1, col = 1, col.names = c("kastad.n.breidd",
-  "kastad.v.lengd", "hift.n.breidd", "hift.v.lengd"), ...)
+geotows(
+  lat,
+  lon,
+  lat1,
+  lon1,
+  col = 1,
+  col.names = c("kastad.n.breidd", "kastad.v.lengd", "hift.n.breidd", "hift.v.lengd"),
+  ...
+)
 }
 \arguments{
 \item{lat}{Vector of start position latitudes, dataframe of start positions 

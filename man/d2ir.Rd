@@ -3,7 +3,6 @@
 \name{d2ir}
 \alias{d2ir}
 \alias{ir2d}
-\alias{ir2d}
 \title{Convert between Geographic Coordinates and ICES Rectangles}
 \usage{
 d2ir(lat, lon = NULL, useI = FALSE)
@@ -38,32 +37,32 @@ CM77/Gen:3, but \code{useI=TRUE} has been done on occasion.
 The statistical rectangles are coded as follows:
 
 The latitudinal rows are 30' high, numbered from \samp{01} at the southern
-boundary of the ICES statistical area (36°00'N, see ICES No. 2 chart)
+boundary of the ICES statistical area (36Â°00'N, see ICES No. 2 chart)
 northwards to \samp{99}. The northern limit of the statistical recangle
-system is thus 85°30'N. The longitudinal columns are 1° wide, coded in an
+system is thus 85Â°30'N. The longitudinal columns are 1Â° wide, coded in an
 alphanumeric system which starts at the western boundary of the ICES
-statistical area (44°00'W, see ICES No.1 chart) with \samp{A0}, continuing
-\samp{A1}, \samp{A2}, \samp{A3} to 40°W. East of 40°W the system continues
+statistical area (44Â°00'W, see ICES No.1 chart) with \samp{A0}, continuing
+\samp{A1}, \samp{A2}, \samp{A3} to 40Â°W. East of 40Â°W the system continues
 \samp{B0}, \samp{B1}, \samp{B2}, \ldots{}, \samp{B9}, \samp{C0}, \samp{C1},
-\samp{C2}, \ldots{}, \samp{M8}, using a different letter for each 10° block
+\samp{C2}, \ldots{}, \samp{M8}, using a different letter for each 10Â° block
 and covering the entire west-east extent of the ICES statistical area, thus:
 
-\tabular{lrcrl}{ \samp{A0} \tab 44°00'W \tab -- \tab 40°00'W \tab
-\samp{A3}\cr \samp{B0} \tab 40°00'W \tab -- \tab 30°00'W \tab \samp{B9}\cr
-\samp{C0} \tab 30°00'W \tab -- \tab 20°00'W \tab \samp{C9}\cr \samp{D0} \tab
-20°00'W \tab -- \tab 10°00'W \tab \samp{D9}\cr \samp{E0} \tab 10°00'W \tab
--- \tab 0°00' \tab \samp{E9}\cr \samp{F0} \tab 0°00' \tab -- \tab 10°00'E
-\tab \samp{F9}\cr \samp{G0} \tab 10°00'E \tab -- \tab 20°00'E \tab
-\samp{G9}\cr \samp{H0} \tab 20°00'E \tab -- \tab 30°00'E \tab \samp{H9}\cr
-\samp{J0} \tab 30°00'E \tab -- \tab 40°00'E \tab \samp{J9}\cr \samp{K0} \tab
-40°00'E \tab -- \tab 50°00'E \tab \samp{K9}\cr \samp{L0} \tab 50°00'E \tab
--- \tab 60°00'E \tab \samp{L9}\cr \samp{M0} \tab 60°00'E \tab -- \tab
-68°30'E \tab \samp{M8}\cr }
+\tabular{lrcrl}{ \samp{A0} \tab 44Â°00'W \tab -- \tab 40Â°00'W \tab
+\samp{A3}\cr \samp{B0} \tab 40Â°00'W \tab -- \tab 30Â°00'W \tab \samp{B9}\cr
+\samp{C0} \tab 30Â°00'W \tab -- \tab 20Â°00'W \tab \samp{C9}\cr \samp{D0} \tab
+20Â°00'W \tab -- \tab 10Â°00'W \tab \samp{D9}\cr \samp{E0} \tab 10Â°00'W \tab
+-- \tab 0Â°00' \tab \samp{E9}\cr \samp{F0} \tab 0Â°00' \tab -- \tab 10Â°00'E
+\tab \samp{F9}\cr \samp{G0} \tab 10Â°00'E \tab -- \tab 20Â°00'E \tab
+\samp{G9}\cr \samp{H0} \tab 20Â°00'E \tab -- \tab 30Â°00'E \tab \samp{H9}\cr
+\samp{J0} \tab 30Â°00'E \tab -- \tab 40Â°00'E \tab \samp{J9}\cr \samp{K0} \tab
+40Â°00'E \tab -- \tab 50Â°00'E \tab \samp{K9}\cr \samp{L0} \tab 50Â°00'E \tab
+-- \tab 60Â°00'E \tab \samp{L9}\cr \samp{M0} \tab 60Â°00'E \tab -- \tab
+68Â°30'E \tab \samp{M8}\cr }
 
 Note that letter \sQuote{\samp{I}} is omitted, unless \code{useI=TRUE}.
 
 When designating a statistical rectangle, the north coordinate is stated
-first. Thus, the recangle of which the southwest corner is 54°00'N, 3°00'E
+first. Thus, the recangle of which the southwest corner is 54Â°00'N, 3Â°00'E
 is coded \samp{37F3}.
 }
 \examples{

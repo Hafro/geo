@@ -4,7 +4,9 @@
 \name{COUNTRY.DEFAULT}
 \alias{COUNTRY.DEFAULT}
 \title{Default country for \code{geo}.}
-\format{The format is: chr "island"}
+\format{
+The format is: chr "island"
+}
 \description{
 Default country, \code{island}, given as a character string.
 }

@@ -4,10 +4,23 @@
 \alias{geopolygon}
 \title{Fill an area.}
 \usage{
-geopolygon(lat, lon = NULL, col = "white", border = FALSE,
-  exterior = FALSE, nx = 1, outside = FALSE, plot = TRUE,
-  save = FALSE, rat = 0.005, density = -1, Projection = NULL,
-  angle = 45, allowed.size = 80000, option = 1)
+geopolygon(
+  lat,
+  lon = NULL,
+  col = "white",
+  border = FALSE,
+  exterior = FALSE,
+  nx = 1,
+  outside = FALSE,
+  plot = TRUE,
+  save = FALSE,
+  rat = 0.005,
+  density = -1,
+  Projection = NULL,
+  angle = 45,
+  allowed.size = 80000,
+  option = 1
+)
 }
 \arguments{
 \item{lat, lon}{Latitude and longitude of data ( or x and y coordinates),

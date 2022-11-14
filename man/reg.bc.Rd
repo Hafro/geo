@@ -4,7 +4,8 @@
 \name{reg.bc}
 \alias{reg.bc}
 \title{Bormicon regions}
-\format{The format is: List of 16 $ Vestur :'data.frame': 1221 obs. of 2
+\format{
+The format is: List of 16 $ Vestur :'data.frame': 1221 obs. of 2
 variables: ..$ lat: num [1:1221] 65.5 65.5 65.5 65.5 65.5 ...  ..$ lon: num
 [1:1221] -24.4 -24.4 -24.3 -24.2 -24.1 ...  $ Vestfirdir :'data.frame': 664
 obs. of 2 variables: ..$ lat: num [1:664] 65.5 65.5 65.4 65.4 65.4 ...  ..$
@@ -39,7 +40,8 @@ obs. of 2 variables: ..$ lat: num [1:188] 63 63 63 63 63 ...  ..$ lon: num
 ..$ lat: num [1:7] 68.5 70 72.5 72.5 70 68.5 68.5 ..$ lon: num [1:7] -8 -4
 -4 -21 -21 -27 -8 - attr(*, "area")= num [1:16] 50437 31953 22803 10501
 16024 ...  - attr(*, "txtloc")=List of 2 ..$ lat: num [1:16] 64.6 66.6 67
-66.3 67 ...  ..$ lon: num [1:16] -25.6 -24.2 -19.2 -19.4 -15.6 ...}
+66.3 67 ...  ..$ lon: num [1:16] -25.6 -24.2 -19.2 -19.4 -15.6 ...
+}
 \description{
 A list of the Bormicon regions
 }

@@ -4,8 +4,14 @@
 \alias{geoinside}
 \title{Finds a subset of a given set of data which is inside a given region.}
 \usage{
-geoinside(data, reg, option = 1, col.names = c("lat", "lon"), na.rm = T,
-  robust = F)
+geoinside(
+  data,
+  reg,
+  option = 1,
+  col.names = c("lat", "lon"),
+  na.rm = T,
+  robust = F
+)
 }
 \arguments{
 \item{data}{a dataframe, should include vectors \$lat and \$lon, but will

@@ -4,9 +4,22 @@
 \alias{geotext}
 \title{Plots text on a drawing defined by geoplot.}
 \usage{
-geotext(lat, lon = 0, z, cex = 0.7, adj = 0.5, col = 1, digits = 0,
-  pretext = "", lwd = 0, aftertext = "", outside = F, angle = 0,
-  jitter = NULL, csi = NULL)
+geotext(
+  lat,
+  lon = 0,
+  z,
+  cex = 0.7,
+  adj = 0.5,
+  col = 1,
+  digits = 0,
+  pretext = "",
+  lwd = 0,
+  aftertext = "",
+  outside = F,
+  angle = 0,
+  jitter = NULL,
+  csi = NULL
+)
 }
 \arguments{
 \item{lat, lon}{Latitude and longitude of data ( or x and y coordinates),
@@ -59,15 +72,20 @@ text vector z. Simular to text but allows lat and lon and a choice of digits
 used.
 }
 \examples{
-
-\dontrun{       geotext(deg,z=z)    # plot text at points deg$lat,deg$lon
+geoplot()
+deg <- data.frame(lon = rnorm(10,-27,1.3),lat = rnorm(10,65,0.6))
+z <- letters[1:10]
+geotext(deg,z=z)    # plot text at points deg$lat,deg$lon
        
        geotext(deg$lat,deg$lon,z,csi=0.06) # Same, size of text 0.06".
-       
+ 
+ x <- deg
+ names(x) <- c('y','x')
+ x$z <- z
        geotext(x$x,x$y,x$z,aftertext="km",pretext="distance")
        # If geopar$projection="none"
        
-       geotext(x,z=x$z,aftertext=" km",pretext="distance",angle =90) 
+       geotext(x$x,x$y,z=x$z,aftertext=" km",pretext="distance",angle = 90) 
        # Same text written vertically.
 
 
@@ -79,10 +97,10 @@ used.
        lat <- rnorm(10,65,0.6)
        # Make a normal dist. random set of 10 points.
 
-       geoplot(lat=lat,lon=lon,grid=F,xlim=c(-22,-30),ylim=c(63,67))
+       geoplot(lat=lat,lon=lon,grid=FALSE,xlim=c(-22,-30),ylim=c(63,67))
        # Plot the random data points.
        
-       geopolygon(island,col=115,exterior=T)
+       geopolygon(island,col=115,exterior=TRUE)
        geolines(island)
        # Color Iceland. Use litir(number) to see colour scheme. 
        # Sharpen lines around Iceland.
@@ -98,7 +116,7 @@ used.
        # With geotext we put one element from lab at each data point.
        title(main="10 Random Data Point")
        # Add title
-}
+
 }
 \seealso{
 \code{\link{geoplot}}, \code{\link{geopolygon}},

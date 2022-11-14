@@ -4,8 +4,16 @@
 \alias{labels_line}
 \title{Labels line ?}
 \usage{
-labels_line(cont, digits, colors, lty, lwd, xlim = c(0, 1), ylim = c(0, 1),
-  linew = F)
+labels_line(
+  cont,
+  digits,
+  colors,
+  lty,
+  lwd,
+  xlim = c(0, 1),
+  ylim = c(0, 1),
+  linew = F
+)
 }
 \arguments{
 \item{cont}{Contours?}

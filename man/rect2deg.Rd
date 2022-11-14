@@ -6,9 +6,6 @@
 \alias{sr2d}
 \alias{mr2d}
 \alias{dr2d}
-\alias{sr2d}
-\alias{mr2d}
-\alias{dr2d}
 \title{Given rectangle code return its center position.}
 \usage{
 r2d(r)

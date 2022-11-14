@@ -4,9 +4,11 @@
 \name{depthloc}
 \alias{depthloc}
 \title{Depth label locations.}
-\format{A data frame with 9 observations on the following 3 variables.
+\format{
+A data frame with 9 observations on the following 3 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} \item{z}{a numeric vector} }}
+vector} \item{z}{a numeric vector} }
+}
 \description{
 Standard locations for the labels of depth contours
 given in \code{\link{gbdypi}}.

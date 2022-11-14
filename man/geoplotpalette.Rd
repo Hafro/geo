@@ -16,4 +16,3 @@ Set define a traditional geoplot-palette with colors from the matix
 \seealso{
 \code{\link{colps}}, \code{\link{hsv}}
 }
-\keyword{~kwd1}

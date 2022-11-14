@@ -4,12 +4,14 @@
 \name{eyjar}
 \alias{eyjar}
 \title{Icelandic islands}
-\format{A data frame with 3401 (including NAs) observations on the following
+\format{
+A data frame with 3401 (including NAs) observations on the following
 2 variables.
 
 \describe{ \item{lat}{a numeric vector}, \item{lon}{a
 numeric vector}: latitude and longitude of coastlines of Icelandic islands
-given as decimal degrees.  }}
+given as decimal degrees.  }
+}
 \source{
 GSHHS - A Global Self-consistent, Hierarchical, High-resolution
 Shoreline Database, version 2.2.

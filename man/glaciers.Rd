@@ -4,9 +4,11 @@
 \name{glaciers}
 \alias{glaciers}
 \title{Outlines of Icelandic glaciers.}
-\format{A data frame with 6469 observations on the following 2 variables.
+\format{
+A data frame with 6469 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 Outlines of Icelandic glaciers.
 }

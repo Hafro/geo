@@ -4,8 +4,25 @@
 \alias{gridaxes.Lambert}
 \title{Set up axes for a Lambert projected geoplot}
 \usage{
-gridaxes.Lambert(limx, limy, scale, b0, xyratio, grid, col, reitur, smareitur,
-  axratio, axlabels, b1, l1, projection, dlat, dlon, col1 = 1)
+gridaxes.Lambert(
+  limx,
+  limy,
+  scale,
+  b0,
+  xyratio,
+  grid,
+  col,
+  reitur,
+  smareitur,
+  axratio,
+  axlabels,
+  b1,
+  l1,
+  projection,
+  dlat,
+  dlon,
+  col1 = 1
+)
 }
 \arguments{
 \item{limx}{Longitude limits}

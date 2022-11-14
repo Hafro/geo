@@ -8,5 +8,5 @@
 #' @aliases geo
 #' @author Höskuldur Björnsson
 #' @import maps mapdata splines methods utils grDevices graphics stats
-#' @useDynLib geo
+#' @useDynLib geo, .registration=TRUE
 NULL

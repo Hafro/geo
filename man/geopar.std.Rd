@@ -4,9 +4,11 @@
 \name{geopar.std}
 \alias{geopar.std}
 \title{Parameters for the geo plot functions.}
-\format{The format is: List of 5 $ xlim: num [1:2] -30 -10 $ ylim: num [1:2]
+\format{
+The format is: List of 5 $ xlim: num [1:2] -30 -10 $ ylim: num [1:2]
 62.2 67.9 $ plt : num [1:4] 0.0816 0.9534 0.1218 0.9004 $ fig : num [1:4] 0
-1 0 1 $ mex : num 1}
+1 0 1 $ mex : num 1
+}
 \description{
 Parameters for the geo plot functions.
 }

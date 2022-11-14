@@ -4,9 +4,11 @@
 \name{gbdypi}
 \alias{gbdypi}
 \title{Isobaths in the NE-Atlantic}
-\format{The format is: List of 58 data frame of lat and lon giving
+\format{
+The format is: List of 58 data frame of lat and lon giving
 isobaths for the same number of depths ranging from 50 to 6000 m
-at 100 m intervals in the range 200 to 5500 m.}
+at 100 m intervals in the range 200 to 5500 m.
+}
 \source{
 IBCAO and/or GEBCO
 }

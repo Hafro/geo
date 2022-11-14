@@ -4,13 +4,41 @@
 \alias{init}
 \title{Initiate a geoplot (??)}
 \usage{
-init(lat, lon = 0, type = "p", pch = "*", xlim = c(0, 0), ylim = c(0,
-  0), b0 = 65, r = 1.05, xlab = "Longitude", ylab = "Latitude",
-  option = "cut", grid = T, new = F, cont = F, cex = 0.7, col = 1,
-  lcont = c(0.13, 0.21), plotit = T, reitur = F, smareitur = F,
-  reittext = F, axratio = 1, lwd = 0, axlabels = T, oldpar,
-  projection = "Mercator", b1 = 65, dlat = 0, dlon = 0, command = 0,
-  jitter = 0, xaxdist, yaxdist)
+init(
+  lat,
+  lon = 0,
+  type = "p",
+  pch = "*",
+  xlim = c(0, 0),
+  ylim = c(0, 0),
+  b0 = 65,
+  r = 1.05,
+  xlab = "Longitude",
+  ylab = "Latitude",
+  option = "cut",
+  grid = T,
+  new = F,
+  cont = F,
+  cex = 0.7,
+  col = 1,
+  lcont = c(0.13, 0.21),
+  plotit = T,
+  reitur = F,
+  smareitur = F,
+  reittext = F,
+  axratio = 1,
+  lwd = 0,
+  axlabels = T,
+  oldpar,
+  projection = "Mercator",
+  b1 = 65,
+  dlat = 0,
+  dlon = 0,
+  command = 0,
+  jitter = 0,
+  xaxdist,
+  yaxdist
+)
 }
 \arguments{
 \item{lat, lon}{Latitude and longitude}

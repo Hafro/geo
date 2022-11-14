@@ -4,8 +4,7 @@
 \alias{inside.reg.bc}
 \title{Determine which bormicon (or gadget) region data belong to.}
 \usage{
-inside.reg.bc(data, only.sv.1to10 = F, ignore.latlon = F,
-  ignore.area0 = T)
+inside.reg.bc(data, only.sv.1to10 = F, ignore.latlon = F, ignore.area0 = T)
 }
 \arguments{
 \item{data}{Data set with coordinates in components \code{lat, lon}.}

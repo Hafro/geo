@@ -13,7 +13,6 @@
 #' @note Call to \code{skipta.texta} could be replaced with a call to
 #' \code{\link{chartr}} (as in ROracleUI sql).
 #' @seealso Calls \code{\link{skipta.texta}}
-#' @keywords ~kwd1
 #' @export pre2s
 pre2s <-
 function(skr, rownames = F, dots.in.text = T)

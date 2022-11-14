@@ -4,8 +4,15 @@
 \alias{currentarrows}
 \title{Plot arrows and segments showing the size and direction of currents.}
 \usage{
-currentarrows(data, maxsize = 0.5, maxn, col = "blue", lwd = 2,
-  arrowsize = 0.2, center = T)
+currentarrows(
+  data,
+  maxsize = 0.5,
+  maxn,
+  col = "blue",
+  lwd = 2,
+  arrowsize = 0.2,
+  center = T
+)
 }
 \arguments{
 \item{data}{Data in a list with components \code{lat} and \code{lon} with

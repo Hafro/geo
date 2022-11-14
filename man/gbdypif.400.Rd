@@ -4,9 +4,11 @@
 \name{gbdypif.400}
 \alias{gbdypif.400}
 \title{GEBCO 400 m isobath around Iceland.}
-\format{A list of 4 data.frames of the following 2 variables:
+\format{
+A list of 4 data.frames of the following 2 variables:
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 Given as 4 polygons.
 }

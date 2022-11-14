@@ -4,9 +4,20 @@
 \alias{variogram}
 \title{Calculates the distance between each pair of datapoints.}
 \usage{
-variogram(lat, lon = 0, z, nbins = 100, maxdist = 0, Hawk = T,
-  throwout = F, scale = "km", evennumber = T, zzp = F, minnumber = 0,
-  col.names = c("lat", "lon"))
+variogram(
+  lat,
+  lon = 0,
+  z,
+  nbins = 100,
+  maxdist = 0,
+  Hawk = T,
+  throwout = F,
+  scale = "km",
+  evennumber = T,
+  zzp = F,
+  minnumber = 0,
+  col.names = c("lat", "lon")
+)
 }
 \arguments{
 \item{lat}{Latitude of datapoints.  If lon=0 lat is a list with components

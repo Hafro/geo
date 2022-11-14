@@ -4,10 +4,16 @@
 \alias{Proj}
 \title{Performs Mercator or Lambert projection of data.}
 \usage{
-Proj(a, b = 0, scale = getOption("geopar")$scale,
-  b0 = getOption("geopar")$b0, b1 = getOption("geopar")$b1,
-  l1 = getOption("geopar")$l1, projection = getOption("geopar")$projection,
-  col.names = c("lon", "lat"))
+Proj(
+  a,
+  b = 0,
+  scale = getOption("geopar")$scale,
+  b0 = getOption("geopar")$b0,
+  b1 = getOption("geopar")$b1,
+  l1 = getOption("geopar")$l1,
+  projection = getOption("geopar")$projection,
+  col.names = c("lon", "lat")
+)
 }
 \arguments{
 \item{a, b}{The input data to be projected, may be given as two vectors or as

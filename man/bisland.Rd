@@ -4,9 +4,11 @@
 \name{bisland}
 \alias{bisland}
 \title{Icelandic coastline, hi-resolution}
-\format{A data frame with 19841 observations on the following 2 variables.
+\format{
+A data frame with 19841 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 Icelandic coastline, hi-resolution, approx. 10 times that of \code{island}.
 }

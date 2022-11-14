@@ -6,9 +6,6 @@
 \alias{srgrid}
 \alias{mrgrid}
 \alias{drgrid}
-\alias{srgrid}
-\alias{mrgrid}
-\alias{drgrid}
 \title{Produce a grid of rectangles on a plot, filled with colors if desired.}
 \usage{
 rgrid(r, fill = FALSE, ...)

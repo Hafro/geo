@@ -4,8 +4,23 @@
 \alias{combine.rt}
 \title{Aggregate data on square grid, pad with zeros.  Faster than tapply.}
 \usage{
-combine.rt(lat, lon, z, grlat, grlon = 0, fun, fill = F, reg = 0,
-  minnumber = 2, wsp = 0, wz = 0, wlat = 0, xy = F, rat = 0.2, type)
+combine.rt(
+  lat,
+  lon,
+  z,
+  grlat,
+  grlon = 0,
+  fun,
+  fill = F,
+  reg = 0,
+  minnumber = 2,
+  wsp = 0,
+  wz = 0,
+  wlat = 0,
+  xy = F,
+  rat = 0.2,
+  type
+)
 }
 \arguments{
 \item{lat}{Latitude of datapoints. ( or x coordinates)}

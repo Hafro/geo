@@ -4,8 +4,18 @@
 \alias{geopoints}
 \title{Adds points on plots initialized by geoplot.}
 \usage{
-geopoints(lat, lon = 0, pch = "*", cex = 0.7, col = 1, lwd = 0,
-  outside = FALSE, jitter = NULL, mkh = NULL, csi = NULL)
+geopoints(
+  lat,
+  lon = 0,
+  pch = "*",
+  cex = 0.7,
+  col = 1,
+  lwd = 0,
+  outside = FALSE,
+  jitter = NULL,
+  mkh = NULL,
+  csi = NULL
+)
 }
 \arguments{
 \item{lat, lon}{Plot points on a graph initialized by geoplot. Data is stored

@@ -6,7 +6,6 @@
 #' 
 #' @return Sets the palette
 #' @seealso \code{\link{colps}}, \code{\link{hsv}}
-#' @keywords ~kwd1
 #' @export geoplotpalette
 geoplotpalette <-
 function(){

@@ -13,7 +13,6 @@
 #' @note Internal to the geo-contour-functions, needs elaboration.
 #' @seealso Called by \code{\link{geocontour}} and
 #' \code{\link{geocontour.fill}}.
-#' @keywords ~kwd1
 #' @export extract
 extract <-
 function(grd, z, maxn = 10000, limits = NULL, col.names = c("lon", "lat"))

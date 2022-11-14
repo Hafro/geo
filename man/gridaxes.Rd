@@ -4,8 +4,24 @@
 \alias{gridaxes}
 \title{Set up axes for a geoplot}
 \usage{
-gridaxes(limx, limy, scale, b0, xyratio, grid, col, reitur, smareitur, axratio,
-  axlabels, b1, l1, projection, dlat, dlon)
+gridaxes(
+  limx,
+  limy,
+  scale,
+  b0,
+  xyratio,
+  grid,
+  col,
+  reitur,
+  smareitur,
+  axratio,
+  axlabels,
+  b1,
+  l1,
+  projection,
+  dlat,
+  dlon
+)
 }
 \arguments{
 \item{limx}{Longitude limits}

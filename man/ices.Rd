@@ -4,8 +4,16 @@
 \alias{ices}
 \title{ICES Areas}
 \usage{
-ices(labels = "roman", diagrams = FALSE, col = "black", lwd = 3,
-  col.lines = "grey80", font = 2, col.text = "orangered", cex = 1)
+ices(
+  labels = "roman",
+  diagrams = FALSE,
+  col = "black",
+  lwd = 3,
+  col.lines = "grey80",
+  font = 2,
+  col.text = "orangered",
+  cex = 1
+)
 }
 \arguments{
 \item{labels}{is how to annotate areas: \code{"roman"} (I--XIV),

@@ -4,8 +4,7 @@
 \alias{geogrid}
 \title{Plots a grid.}
 \usage{
-geogrid(lat, lon = 0, col = 1, type = "l", lwd = 0, lty = 0,
-  pch = "+", nx = 5)
+geogrid(lat, lon = 0, col = 1, type = "l", lwd = 0, lty = 0, pch = "+", nx = 5)
 }
 \arguments{
 \item{lat, lon}{Latitude and longitude of data ( or x and y coordinates),

@@ -6,9 +6,6 @@
 \alias{d2sr}
 \alias{d2mr}
 \alias{d2dr}
-\alias{d2sr}
-\alias{d2mr}
-\alias{d2dr}
 \title{Given position return rectangle code.}
 \usage{
 d2r(lat, lon = NULL)
@@ -63,7 +60,7 @@ with the option of specifying starting latitudes.
 \examples{
 
 
-## tally positions in rectangles in object \\code{\\link{island}} giving
+## tally positions in rectangles in object \code{\link{island}} giving
 ## Iceland's coastline
 
 data(island)

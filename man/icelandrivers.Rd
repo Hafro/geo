@@ -4,9 +4,11 @@
 \name{icelandrivers}
 \alias{icelandrivers}
 \title{Icelandic rivers.}
-\format{A data frame with 1124 observations on the following 2 variables.
+\format{
+A data frame with 1124 observations on the following 2 variables.
 \describe{ \item{lat}{a numeric vector} \item{lon}{a numeric
-vector} }}
+vector} }
+}
 \description{
 Icelandic rivers, from gshhg probably.
 }

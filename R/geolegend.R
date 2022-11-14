@@ -1,12 +1,12 @@
 #' Put a legend on a plot in the geo series.
 #' 
-#' Adds a legend to current plot.  The location can be specified with \$lat and
-#' \$lon.  Allows all the same parameters as legend.
+#' Adds a legend to current plot.  The location can be specified with lat and
+#' lon.  Allows all the same parameters as legend.
 #' 
 #' See legend.
 #' 
-#' @param pos The position of the text, should include \$lat and \$lon.  If
-#' \$lat and \$lon are llength 1, they determine the top left corner of the
+#' @param pos The position of the text, should include lat and lon.  If
+#' lat and lon are llength 1, they determine the top left corner of the
 #' rectangle; if theey are length 2 vectors, the give opposite corners of the
 #' rectangular area.  A list containing x and y values may be supplied.
 #' @param legend Vector of character strings to be associated with plot.

@@ -4,8 +4,8 @@
 #' 
 #' 
 #' @param vagram List from the program variogram with the following components.
-#' <s-example> \$range: range of data.  \$nugget: nugget effect.  \$sill: sill.
-#' \$vario: z values of the variogram.  \$xh: mean distance for each class.
+#' <s-example> range: range of data.  nugget: nugget effect.  sill: sill.
+#' vario: z values of the variogram.  xh: mean distance for each class.
 #' 
 #' </s-example>
 #' @param n The plot covers n times the range.  Default value is all the data.

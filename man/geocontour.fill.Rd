@@ -39,15 +39,15 @@ geocontour.fill(
 )
 }
 \arguments{
-\item{grd}{List with components \$lat and \$lon (or \$x, \$y) defining the
+\item{grd}{List with components lat and lon (or x, y) defining the
 grid values.  Can be made for example by lat <- list(lat = seq(60, 65,
 length = 100), lon = seq(-30, - 10, length = 200)).  Also lat can be the
-outcome of the program grid and then the components lat\$grpt\$lat,
-lat\$grpt\$lon and lat\$reg are used.}
+outcome of the program grid and then the components latgrptlat,
+latgrptlon and latreg are used.}
 
 \item{z}{Matrix or vector of values.  Length(z) = nlat*nlon except when lat
-is a list with components lat\$grpt and lat\$xgr.  Then the length of z is
-the same as the length of lat\$xgr\$lat and lat\$xgr\$lon.  This is the case
+is a list with components latgrpt and latxgr.  Then the length of z is
+the same as the length of latxgrlat and latxgrlon.  This is the case
 if the output of the grid program is used as input lat.}
 
 \item{levels}{Values at contourlines.  Default value is zero.  If levels is
@@ -96,18 +96,18 @@ allowed else negative values are set to zero.  Default value is FALSE.}
 
 \item{fill}{Determines whether NA's should be replaced with zeros (fill = 1)
 or mean(z) (fill = 2).  Default value is fill = 1.  Used when lat is a list
-with components lat\$xgr\$lat, lat\$xgr\$lon, lat\$grpt\$lat and
-lat\$grpt\$lon.  Only used in special cases.}
+with components latxgrlat, latxgrlon, latgrptlat and
+latgrptlon.  Only used in special cases.}
 
 \item{maxcol}{Number of colors used (excluding #0).  Default value 155.}
 
 \item{white}{If true the the first class is represented with white (color
 0). Default value is FALSE but white = TRUE is also often used.}
 
-\item{label.location}{List with components \$lat and \$lon.  (or \$x, \$y)
+\item{label.location}{List with components lat and lon.  (or x, y)
 Gives the lower left and upper right corner of the box where the labels are
 put.  Default value is 0 that means no labels are put on the drawing (except
-when geopar\$cont = TRUE).  l1 is best given by geolocator or directly by
+when geoparcont = TRUE).  l1 is best given by geolocator or directly by
 specifying label.location = "locator".}
 
 \item{labels.only}{If labels.only is true no contours are drawn but only
@@ -231,9 +231,9 @@ If good picture is needed geocontour should be used between levels to get
 sharper pictures. </s-example> <s-example>
 
 If the matrix z is not full the program should be called by a list
-lat\$xgr\$lat, lat\$xgr\$lon, lat\$grpt\$lat and lat\$grpt\$lon.  Then the
-length of the vectors z, lat\$xgr\$lat and lat\$xgr\$lon is the same.
-lat\$grpt\$lat and lat\$grpt\$lon is on the other hand the coordinates of
+latxgrlat, latxgrlon, latgrptlat and latgrptlon.  Then the
+length of the vectors z, latxgrlat and latxgrlon is the same.
+latgrptlat and latgrptlon is on the other hand the coordinates of
 the rows and columns of the matrix. The program grid makes a list with
 components with these names. </s-example> <s-example>
 

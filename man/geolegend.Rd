@@ -7,8 +7,8 @@
 geolegend(pos, legend, ...)
 }
 \arguments{
-\item{pos}{The position of the text, should include \$lat and \$lon.  If
-\$lat and \$lon are llength 1, they determine the top left corner of the
+\item{pos}{The position of the text, should include lat and lon.  If
+lat and lon are llength 1, they determine the top left corner of the
 rectangle; if theey are length 2 vectors, the give opposite corners of the
 rectangular area.  A list containing x and y values may be supplied.}
 
@@ -21,8 +21,8 @@ function to be taken.}
 None.
 }
 \description{
-Adds a legend to current plot.  The location can be specified with \$lat and
-\$lon.  Allows all the same parameters as legend.
+Adds a legend to current plot.  The location can be specified with lat and
+lon.  Allows all the same parameters as legend.
 }
 \details{
 See legend.

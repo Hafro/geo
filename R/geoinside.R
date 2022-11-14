@@ -5,7 +5,7 @@
 #' index vector.
 #' 
 #' 
-#' @param data a dataframe, should include vectors \$lat and \$lon, but will
+#' @param data a dataframe, should include vectors lat and lon, but will
 #' except other names, see col.names.
 #' @param reg The region we want to determine whether the data is inside of,
 #' should include vectors with same names as data.
@@ -20,7 +20,7 @@
 #' @param col.names Default col.names = c("lat","lon"), determines the names of
 #' the base vectors of the space we are viewing.  May be replaced by for
 #' instance col.names = c("x","y")
-#' @param na.rm If true values where \$lat or \$lon are NA are removed.
+#' @param na.rm If true values where lat or lon are NA are removed.
 #' Default is false.
 #' @param robust If true a robust search is done, if false the function runs
 #' faster.  Default is true. Robust = T will not work if the regions edges

@@ -17,7 +17,7 @@ Proj(
 }
 \arguments{
 \item{a, b}{The input data to be projected, may be given as two vectors or as
-list attributes, \$lat and \$lon (\$x and \$y if projection = none).}
+list attributes, lat and lon (x and y if projection = none).}
 
 \item{scale}{The scale used for the projection, (m, km or miles). Default is
 the scale defined in geopar (the scale defined when the plot is
@@ -41,8 +41,8 @@ otherwise projection will be set to "none".}
 \value{
 The function returns a list containing if projection = "none" x and
 y, if projection is "Mercator" or "Lambert" it includes the projection
-(\$projection), the scale (\$scale), \$lat and \$lon and \$x and \$y (the
-distance in \$scale from point (0,0) in spherical coordinates.
+(projection), the scale (scale), lat and lon and x and y (the
+distance in scale from point (0,0) in spherical coordinates.
 }
 \description{
 Performs Mercator, Lambert or no projection of data, as a default it will

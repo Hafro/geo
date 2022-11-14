@@ -32,7 +32,7 @@ combine.rt(
 \item{grlat}{Latitude of defined grid.}
 
 \item{grlon}{Longitude of defined grid.  If 0 grlat is a list with
-components \$lat and \$lon.}
+components lat and lon.}
 
 \item{fun}{Function (?).}
 
@@ -41,7 +41,7 @@ points does not reach the minimum is set to zero.  Good for data like
 trawlers report where it can be assumed that there is little fish where they
 do not try.}
 
-\item{reg}{List with two components \$lat and \$lon.  Points outside region
+\item{reg}{List with two components lat and lon.  Points outside region
 are not returned.  The list is typically output from the program
 define.area.}
 
@@ -83,13 +83,13 @@ It can also be used to find sums or averages of points within squares.
 The program works quite fast even for very large datasets.
 }
 \section{Value}{
- <s-example> List with components \$lat,\$lon,\$z,\$n and
-\$fill.  \$lat mean latitude of points within each square.  \$lon mean
-longitude of points within each square \$z sum, mean, variance or median of
-data \$n Number of points behind point.
+ <s-example> List with components lat,lon,z,n and
+fill.  lat mean latitude of points within each square.  lon mean
+longitude of points within each square z sum, mean, variance or median of
+data n Number of points behind point.
 
-If type = "rm.outliers" \$n this component stores the number of the square
-corresponding to each point. \$fill If 0 there are datapoints behind the
+If type = "rm.outliers" n this component stores the number of the square
+corresponding to each point. fill If 0 there are datapoints behind the
 points else it is an artificial point. (fill = T) </s-example>
 }
 

@@ -21,13 +21,13 @@
 #' @param z Values at datapoints.
 #' @param grlat Latitude of defined grid.
 #' @param grlon Longitude of defined grid.  If 0 grlat is a list with
-#' components \$lat and \$lon.
+#' components lat and lon.
 #' @param fun Function (?).
 #' @param fill If fill is T the center points of squares where the number of
 #' points does not reach the minimum is set to zero.  Good for data like
 #' trawlers report where it can be assumed that there is little fish where they
 #' do not try.
-#' @param reg List with two components \$lat and \$lon.  Points outside region
+#' @param reg List with two components lat and lon.  Points outside region
 #' are not returned.  The list is typically output from the program
 #' define.area.
 #' @param minnumber Minimum number of points needed for the square to be valid.
@@ -43,13 +43,13 @@
 #' points on each side are moved.  i.e. the middle 60\% are kept.  Default
 #' value is 0.6.
 #' @param type Only value with description \code{rm.outliers}.
-#' @section Value: <s-example> List with components \$lat,\$lon,\$z,\$n and
-#' \$fill.  \$lat mean latitude of points within each square.  \$lon mean
-#' longitude of points within each square \$z sum, mean, variance or median of
-#' data \$n Number of points behind point.
+#' @section Value: <s-example> List with components lat,lon,z,n and
+#' fill.  lat mean latitude of points within each square.  lon mean
+#' longitude of points within each square z sum, mean, variance or median of
+#' data n Number of points behind point.
 #' 
-#' If type = "rm.outliers" \$n this component stores the number of the square
-#' corresponding to each point. \$fill If 0 there are datapoints behind the
+#' If type = "rm.outliers" n this component stores the number of the square
+#' corresponding to each point. fill If 0 there are datapoints behind the
 #' points else it is an artificial point. (fill = T) </s-example>
 #' @seealso \code{\link{variogram}}, \code{\link{variofit}},
 #' \code{\link{pointkriging}}, \code{\link{grid}},

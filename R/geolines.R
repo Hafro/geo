@@ -30,7 +30,7 @@
 #' Default FALSE.
 #' @param return.data Logical, should the data be returned? Default FALSE.
 #' @return No values returned.
-#' @section Side Effects: The projection is stored in geopar\$projection and
+#' @section Side Effects: The projection is stored in geoparprojection and
 #' parameters for the transform in \code{geopar$b0, geopar$b1 and geopar$l1}.
 #' @seealso \code{\link{geoplot}}, \code{\link{geopolygon}},
 #' \code{\link{geopoints}}, \code{\link{geotext}}, \code{\link{geosymbols}},

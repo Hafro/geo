@@ -10,7 +10,7 @@
 #' 
 #' 
 #' @param lat Latitude of datapoints.  If lon=0 lat is a list with components
-#' \$lat and \$lon.
+#' lat and lon.
 #' @param z Values at datapoints.
 #' @param lon longitude of datapoints.
 #' @param nbins Number of distance intervals used.

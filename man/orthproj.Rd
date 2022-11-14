@@ -7,7 +7,7 @@
 orthproj(pts, curve)
 }
 \arguments{
-\item{pts}{A list containing the points as \$lat and \$lon, you may also use
+\item{pts}{A list containing the points as lat and lon, you may also use
 geolocator.}
 
 \item{curve}{The curve to be used for projection.}

@@ -3,8 +3,8 @@
 #' Expands a grid to a dataframe simular to expand.grid.
 #' 
 #' 
-#' @param grid The grid to be expanded, a list containing vectors \$lat and
-#' \$lon.
+#' @param grid The grid to be expanded, a list containing vectors lat and
+#' lon.
 #' @return A dataframe of the grid.
 #' @section Side Effects: None.
 #' @seealso \code{\link{expand.grid}}.

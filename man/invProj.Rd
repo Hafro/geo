@@ -16,7 +16,7 @@ invProj(
 }
 \arguments{
 \item{x, y}{The input data to be inversely projected, may be given as two
-vectors or as list attributes (\$x and \$y).}
+vectors or as list attributes (x and y).}
 
 \item{scale}{The scale of the input date (m, km or miles), default is the
 scale defined in geopar (the scale defined when the plot is initialized).}
@@ -35,9 +35,9 @@ defined in geopar.}
 geopar.}
 }
 \value{
-The function returns a list containing if projection = "none" \$x
-and \$y, if projection is mercator or Lambert it includes the projection
-(\$projection), the scale (\$scale), \$lat and \$lon and \$x and \$y.
+The function returns a list containing if projection = "none" x
+and y, if projection is mercator or Lambert it includes the projection
+(projection), the scale (scale), lat and lon and x and y.
 }
 \description{
 Accepts data in spherical coordinates with center lattitude 0 and longitude

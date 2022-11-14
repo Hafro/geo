@@ -8,8 +8,8 @@
 #' 
 #' 
 #' @param vagram List with the calculated variogram. Components of the list
-#' are: \$dist mean distance of the interval.  <s-example> \$vario calculated
-#' value of the variogram.  \$number number of datapoints in the interval.
+#' are: dist mean distance of the interval.  <s-example> vario calculated
+#' value of the variogram.  number number of datapoints in the interval.
 #' </s-example> In nearly all cases vagram will be the output from the program
 #' variogram.
 #' @param model Type of model.  Default is spherical.  It is currently the only
@@ -21,10 +21,10 @@
 #' by the locator function.
 #' @param sill Sill of the variogram, or: Limit of the variogram tending to
 #' infinity lag distances (wikipedia).
-#' @section Value: <s-example> A list with the following components.  \$nugget
-#' : Estimated nugget effect \$sill : Estimated sill \$range : Estimated range
-#' \$dist : mean distance of the interval.  \$vario : calculated value of the
-#' variogram.  \$number : number of datapoints in the interval. </s-example>
+#' @section Value: <s-example> A list with the following components.  nugget
+#' : Estimated nugget effect sill : Estimated sill range : Estimated range
+#' dist : mean distance of the interval.  vario : calculated value of the
+#' variogram.  number : number of datapoints in the interval. </s-example>
 #' @seealso \code{\link{variogram}}, \code{\link{pointkriging}}.
 #' @export variofit
 variofit <-

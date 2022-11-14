@@ -13,7 +13,7 @@ geoarea(
 )
 }
 \arguments{
-\item{data}{The region, should contain \$lat and \$lon.}
+\item{data}{The region, should contain lat and lon.}
 
 \item{Projection}{Which projection is beeing used.}
 

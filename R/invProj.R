@@ -5,7 +5,7 @@
 #' 
 #' 
 #' @param x,y The input data to be inversely projected, may be given as two
-#' vectors or as list attributes (\$x and \$y).
+#' vectors or as list attributes (x and y).
 #' @param scale The scale of the input date (m, km or miles), default is the
 #' scale defined in geopar (the scale defined when the plot is initialized).
 #' @param b0 if projection = Mercator b0 is the center of the Mercator
@@ -17,9 +17,9 @@
 #' @param projection The projection to be inversed, legal projections are
 #' "mercator", "Lambert" and "none". Default is the projection defined in
 #' geopar.
-#' @return The function returns a list containing if projection = "none" \$x
-#' and \$y, if projection is mercator or Lambert it includes the projection
-#' (\$projection), the scale (\$scale), \$lat and \$lon and \$x and \$y.
+#' @return The function returns a list containing if projection = "none" x
+#' and y, if projection is mercator or Lambert it includes the projection
+#' (projection), the scale (scale), lat and lon and x and y.
 #' @seealso \code{\link{invProj}}, \code{\link{geopar}}, \code{\link{geoplot}}.
 #' @export invProj
 invProj <-

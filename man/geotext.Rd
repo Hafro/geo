@@ -24,8 +24,8 @@ geotext(
 \arguments{
 \item{lat, lon}{Latitude and longitude of data ( or x and y coordinates),
 negative for southern latitudes and western longitudes.  May be supplied as
-two vectors or as a list lat (or x) including vectors lat\$lat and lat\$lon
-(x\$x and x\$y if projection = none).}
+two vectors or as a list lat (or x) including vectors latlat and latlon
+(xx and xy if projection = none).}
 
 \item{z}{Vector with values that will be plotted at datapoints. Has to be of
 the same length as lat. If z is of mode character it is written directly on
@@ -33,7 +33,7 @@ the screen.}
 
 \item{cex}{Relative size of characters (see the help on the parameter cex).
 The size of plotted characeters is cex time the parameter csi that can be
-seen by par()\$csi.  In earlier versions of geoplot the parameter csi was
+seen by par()csi.  In earlier versions of geoplot the parameter csi was
 set but csi is a parameter that can not be set in R.}
 
 \item{adj}{Location of the text relative to the point, 0 means text right of

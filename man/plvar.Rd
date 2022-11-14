@@ -8,8 +8,8 @@ plvar(vagram, n = 4, fit = T, type = "p")
 }
 \arguments{
 \item{vagram}{List from the program variogram with the following components.
-<s-example> \$range: range of data.  \$nugget: nugget effect.  \$sill: sill.
-\$vario: z values of the variogram.  \$xh: mean distance for each class.
+<s-example> range: range of data.  nugget: nugget effect.  sill: sill.
+vario: z values of the variogram.  xh: mean distance for each class.
 
 </s-example>}
 

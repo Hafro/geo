@@ -14,9 +14,9 @@
 #' @param lon Longitude of datapoints.
 #' @param z Values at datapoints.
 #' @param xgr Description of the grid. Can be output from program grid or just
-#' a list with components \$lat and \$lon.
+#' a list with components lat and lon.
 #' @param vagram Components of the variogram, a list with a least 3 components,
-#' \$sill, \$nugget & \$rang1.
+#' sill, nugget & rang1.
 #' @param maxnumber Number of neighbourhood points used , default is 16.  In
 #' some cases 16 points are not found.
 #' @param scale Scale "km" or "miles", default is "miles".

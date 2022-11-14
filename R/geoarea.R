@@ -3,7 +3,7 @@
 #' Calculates the area of a given region to a given precision.
 #' 
 #' 
-#' @param data The region, should contain \$lat and \$lon.
+#' @param data The region, should contain lat and lon.
 #' @param ngrdpts The precision of the calculation.
 #' @param Projection Which projection is beeing used.
 #' @param old.method If true an older version of this program is used. Default

@@ -36,10 +36,10 @@ pointkriging(
 \item{z}{Values at datapoints.}
 
 \item{xgr}{Description of the grid. Can be output from program grid or just
-a list with components \$lat and \$lon.}
+a list with components lat and lon.}
 
 \item{vagram}{Components of the variogram, a list with a least 3 components,
-\$sill, \$nugget & \$rang1.}
+sill, nugget & rang1.}
 
 \item{maxnumber}{Number of neighbourhood points used , default is 16.  In
 some cases 16 points are not found.}

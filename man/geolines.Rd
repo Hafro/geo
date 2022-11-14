@@ -57,7 +57,7 @@ transforms the data as specified in geoplot. Similar to the Splus function
 lies.
 }
 \section{Side Effects}{
- The projection is stored in geopar\$projection and
+ The projection is stored in geoparprojection and
 parameters for the transform in \code{geopar$b0, geopar$b1 and geopar$l1}.
 }
 

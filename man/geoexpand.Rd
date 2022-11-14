@@ -7,8 +7,8 @@
 geoexpand(grid)
 }
 \arguments{
-\item{grid}{The grid to be expanded, a list containing vectors \$lat and
-\$lon.}
+\item{grid}{The grid to be expanded, a list containing vectors lat and
+lon.}
 }
 \value{
 A dataframe of the grid.

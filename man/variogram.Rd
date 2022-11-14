@@ -21,7 +21,7 @@ variogram(
 }
 \arguments{
 \item{lat}{Latitude of datapoints.  If lon=0 lat is a list with components
-\$lat and \$lon.}
+lat and lon.}
 
 \item{lon}{longitude of datapoints.}
 

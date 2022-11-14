@@ -5,7 +5,7 @@
 #' projection from a given origin on the curve.
 #' 
 #' 
-#' @param pts A list containing the points as \$lat and \$lon, you may also use
+#' @param pts A list containing the points as lat and lon, you may also use
 #' geolocator.
 #' @param curve The curve to be used for projection.
 #' @return Returns a dataframe with vectors pardist (length of orthogonal

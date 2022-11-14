@@ -14,7 +14,7 @@ geoinside(
 )
 }
 \arguments{
-\item{data}{a dataframe, should include vectors \$lat and \$lon, but will
+\item{data}{a dataframe, should include vectors lat and lon, but will
 except other names, see col.names.}
 
 \item{reg}{The region we want to determine whether the data is inside of,
@@ -33,7 +33,7 @@ data, data[return[i],] is the i-th point in data outside reg. </s-example>}
 the base vectors of the space we are viewing.  May be replaced by for
 instance col.names = c("x","y")}
 
-\item{na.rm}{If true values where \$lat or \$lon are NA are removed.
+\item{na.rm}{If true values where lat or lon are NA are removed.
 Default is false.}
 
 \item{robust}{If true a robust search is done, if false the function runs

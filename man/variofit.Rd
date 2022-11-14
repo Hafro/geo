@@ -8,8 +8,8 @@ variofit(vagram, model = 1, option = 2, interactivt = F, sill = 0)
 }
 \arguments{
 \item{vagram}{List with the calculated variogram. Components of the list
-are: \$dist mean distance of the interval.  <s-example> \$vario calculated
-value of the variogram.  \$number number of datapoints in the interval.
+are: dist mean distance of the interval.  <s-example> vario calculated
+value of the variogram.  number number of datapoints in the interval.
 </s-example> In nearly all cases vagram will be the output from the program
 variogram.}
 
@@ -34,10 +34,10 @@ Currently only spherical model is supported.  Later other models will be
 added.
 }
 \section{Value}{
- <s-example> A list with the following components.  \$nugget
-: Estimated nugget effect \$sill : Estimated sill \$range : Estimated range
-\$dist : mean distance of the interval.  \$vario : calculated value of the
-variogram.  \$number : number of datapoints in the interval. </s-example>
+ <s-example> A list with the following components.  nugget
+: Estimated nugget effect sill : Estimated sill range : Estimated range
+dist : mean distance of the interval.  vario : calculated value of the
+variogram.  number : number of datapoints in the interval. </s-example>
 }
 
 \seealso{

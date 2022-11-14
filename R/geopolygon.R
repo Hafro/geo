@@ -8,8 +8,8 @@
 #' 
 #' @param lat,lon Latitude and longitude of data ( or x and y coordinates),
 #' negative for southern latitudes and western longitudes. May be supplied as
-#' two vectors or as a list lat (or x) including vectors lat\$lat and lat\$lon
-#' (x\$x and x\$y if projection = none).
+#' two vectors or as a list lat (or x) including vectors latlat and latlon
+#' (xx and xy if projection = none).
 #' @param col Color number used.  Default value is 0 (often white).
 #' @param border If TRUE borders around the polygon are drawn. Default value is
 #' FALSE.

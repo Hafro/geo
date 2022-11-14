@@ -14,7 +14,7 @@
 #' program interprets data as lat, lon or x, y depends on the parameter
 #' projection. If projection is "none" data is interpreted as x, y else lat,
 #' lon. When the data is interpreted as x, y lists are assumed to have the
-#' components \$x and \$y, else \$lat and \$lon.Geoplot is often used with type
+#' components x and y, else lat and lon.Geoplot is often used with type
 #' = "n" so the datapoints used to set up the drawing are not seen. Calling
 #' geoplot with plotit = FALSE sets up the drawing without putting anything on
 #' the screen ( or page).
@@ -22,8 +22,8 @@
 #' 
 #' @param lat,lon Latitude and longitude of data (or x and y coordinates),
 #' negative for southern latitudes and western longitudes. May be supplied as
-#' two vectors or as a list or dataframe lat (or x) including vectors lat\$lat
-#' and lat\$lon (x\$x and x\$y if projection = none). If xlim and ylim are
+#' two vectors or as a list or dataframe lat (or x) including vectors latlat
+#' and latlon (xx and xy if projection = none). If xlim and ylim are
 #' given the arguments lat and lon are not required.
 #' @param type Options are the same as in the plot function i.e "l" for lines,
 #' "n" for not plotting the data, "p" for points etc. Default value is "p"
@@ -71,7 +71,7 @@
 #' somewhere in the graph.
 #' @param cex Relative size of character and symbols (see the help on the
 #' parameter cex).  The size of plotted characeters is cex time the parameter
-#' csi that can be seen by par()\$csi.  In earlier versions of geoplot the
+#' csi that can be seen by par()csi.  In earlier versions of geoplot the
 #' parameter csi was set but csi is a parameter that can not be set in R.
 #' @param col The color number used to for the plot. Default value is 1 that is
 #' usually black.

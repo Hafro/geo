@@ -1,10 +1,10 @@
 Package: geo
-Version: 1.5-0
-Date: 2018-04-11
+Version: 1.5-1
+Date: 2022-11-14
 Title: Draw and Annotate Maps, Especially Charts of the North Atlantic
 Author: Hoskuldur Bjornsson, Sigurdur Thor Jonsson, Arni Magnusson, and Bjarki
   Thor Elvarsson
-Maintainer: Sigurdur Thor Jonsson <sigurdur@hafro.is>
+Maintainer: Bjarki Elvarsson <bjarki.elvarsson@hafogvatn.is>
 Depends: maps, mapdata, R (>= 2.10.0)
 Imports: splines, methods, utils, grDevices, graphics, stats
 LazyData: yes

@@ -11,8 +11,8 @@ geointersect(data, border, in.or.out)
 
 \item{border}{Polygon to intersect with/complement from.}
 
-\item{in.or.out}{Whether to take intersect of âxâ and âxbâ (0) 
-or complement of âxâ in âxbâ (1). Default 0.}
+\item{in.or.out}{Whether to take intersect of A and B (0) 
+or complement of A in B (1). Default 0.}
 }
 \description{
 Find intersection of 2 polygons

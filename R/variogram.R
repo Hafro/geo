@@ -91,7 +91,7 @@ function(lat, lon = 0, z, nbins = 100, maxdist = 0, Hawk = T, throwout = F,
 		nbins <- nbins * 10
 	ddist <- maxdist/nbins
 	dist <- vario <- number <- rep(0, nbins)
-	dist <- .C("variogram", PACKAGE = "geo", 
+	dist <- .C("c_variogram", PACKAGE = "geo", 
 		as.double(lat),
 		as.double(lon),
 		as.double(z),

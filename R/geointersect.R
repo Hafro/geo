@@ -5,8 +5,8 @@
 #' 
 #' @param data Polygon.
 #' @param border Polygon to intersect with/complement from.
-#' @param in.or.out Whether to take intersect of âxâ and âxbâ (0) 
-#' or complement of âxâ in âxbâ (1). Default 0.
+#' @param in.or.out Whether to take intersect of A and B (0) 
+#' or complement of A in B (1). Default 0.
 #' @seealso \code{\link{findcut}}, \code{\link{invProj}}, \code{\link{Proj}}
 #' @keywords logic manip 
 #' @export geointersect

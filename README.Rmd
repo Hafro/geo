@@ -1,9 +1,18 @@
 ---
-title: "README.qmd"
-execute: 
-  keep-md: true
-format: html
+output: github_document
 ---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
 # Introduction
 
 Package geo is a collection of useful utilities for mainly plotting marine data in the North Atlantic

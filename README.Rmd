@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Introduction
+
+Package geo is a collection of useful utilities for mainly plotting marine data in the North Atlantic
+
+To install, run:
+
+```{r, eval=FALSE}
+pak::pak("hafro/geo")
+```
+
+
+## Example use
+
+Simple plot of Iceland
+
+```{r, message=FALSE}
+library(geo)
+geoplot()
+```
+
+
+Let's add some data into the mix. Read the spring survey tow station locations from data.hafro.is:
+
+```{r}
+spring <- 
+  read.csv("http://data.hafro.is/research/survey_stations/spring.csv")
+
+head(spring)
+```
+
+Convert location data to decimal positions:
+
+```{r}
+spring <- 
+  geoconvert(spring,col.names = c('North1','West1'))
+spring <- 
+  geoconvert(spring,col.names = c('North2','West2'))
+```
+
+Now plot:
+
+```{r}
+geoplot(spring$North1,-spring$West1)
+```
+

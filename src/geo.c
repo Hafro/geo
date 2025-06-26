@@ -4,15 +4,14 @@
 #include <Rmath.h>
 #include <Rinternals.h>
 
-int lsign();
-
+int lsign(double x);
+double distance(double lat, double lon, double lat1, double lon1);
+double distance_x(double x, double y, double x1, double y1);
+double spherical(double dist, double range, double sill, double nugget);   
 
 /* routine that sorts data */
 
-void sort_c(arrinn,m,indxx)
-  int     *m,*indxx;
-double  *arrinn;
-
+void sort_c(double *arrinn, int *m, int *indxx)
 {
   int l,j,ir,indxt,i,n,*indx;
   double q,*arrin;
@@ -51,12 +50,11 @@ double  *arrinn;
 
 
 
-void 
-  geomarghc(x,y,n,xp,yp,lx,nlx,inni,tmpinni)
-  
-  double *x,*y,*xp,*yp;
-int *n,*lx,*nlx,*inni,*tmpinni;
-
+void geomarghc(
+    double *x, double *y, int *n,
+    double *xp, double *yp,
+    int *lx, int *nlx,
+    int *inni, int *tmpinni)
 {
   
   int i,j,i1,i2;
@@ -88,11 +86,11 @@ int *n,*lx,*nlx,*inni,*tmpinni;
 
 /*  Function that finds which points are inside a polygon */
 
-void marghc(x,y,n,xp,yp,m,lx,nlx,inni,a,a1)
-  
-  double *x,*y,*xp,*yp,*a,*a1;
-int *n,*m,*lx,*nlx,*inni;
-
+void marghc(
+    double *x, double *y, int *n,
+    double *xp, double *yp, int *m,
+    int *lx, int *nlx,
+    int *inni, double *a, double *a1)
 {
   
   double eps,pi,a3[20],a4;
@@ -122,8 +120,7 @@ int *n,*m,*lx,*nlx,*inni;
   }
 }
 
-int lsign(x)
-  double(x) ;
+int lsign(double x)
 {
     int sign1;
     if(x == 0) sign1=0;
@@ -134,11 +131,11 @@ int lsign(x)
 
 
 
-void skurdp( x1, y1, x2, y2, x3, y3, x4, y4,xs, ys,find, t1,s1) 
-  
-  double x1,y1,x2,y2,x3,y3,x4,y4,*xs,*ys,*t1,*s1;
-int *find;
-
+void skurdp(
+    double x1, double y1, double x2, double y2,
+    double x3, double y3, double x4, double y4,
+    double *xs, double *ys, int *find,
+    double *t1, double *s1)
 {
   double t,s,eps=1e-7,eps1=1e-6,det;
   
@@ -155,10 +152,11 @@ int *find;
   *t1 = t;*s1=s;
 }
 
-int inside(x,y,xb,yb,nxb,ab,ab1) 
-  
-  double *x,*y,*xb,*yb,*ab,*ab1;
-int *nxb;
+int inside(
+    double *x, double *y,
+    double *xb, double *yb,
+    int *nxb,
+    double *ab, double *ab1)
 {
   int n,lx[2],nlx,inni;
   n=1;nlx=2;inni=0;
@@ -173,10 +171,11 @@ int *nxb;
 /*  Program that finds the longersection with any edge of a polygon 
  Can be any number up to 20.  */
 
-void find_cut(x1,y1,x2,y2,xb,yb,nxb,xs,ys,nsk,side,order,ts,ss)
-  double x1,y1,x2,y2,*xb,*yb,*xs,*ys,*ts,*ss;
-int nxb,*nsk,*side,*order;
-
+void find_cut(
+    double x1, double y1, double x2, double y2,
+    double *xb, double *yb, int nxb,
+    double *xs, double *ys, int *nsk,
+    int *side, int *order, double *ts, double *ss)
 {
   int i,tmp=0,k=0;
   for(i = 0;i<nxb-1;i++) {
@@ -189,11 +188,15 @@ int nxb,*nsk,*side,*order;
 
 /*  Defines a polygon that cuts an edge Do not allow the same line to cut twice */
 
-void define_poly(x,y,xb,yb,xr,yr,n,nxb,nxr,mark,rside,rs,rt,ab,ab1,in_or_out)
-  
-  double *x,*y,*xb,*yb,*xr,*yr,*rs,*rt,*ab,*ab1;
-int *n,*nxb,*nxr,*mark,*rside,in_or_out;
-
+void define_poly(
+    double *x, double *y,
+    double *xb, double *yb,
+    double *xr, double *yr,
+    int *n, int *nxb, int *nxr,
+    int *mark, int *rside,
+    double *rs, double *rt,
+    double *ab, double *ab1,
+    int in_or_out)
 {
   int i,j,i2[2],nsk[1],i1,
   side[50],order[50];
@@ -220,9 +223,10 @@ int *n,*nxb,*nxr,*mark,*rside,in_or_out;
 }
 
 
-void fill_in(s1,s2,up,xb,yb,nxb,xr,yr,nxr) 
-  int s1,s2,*nxb,*nxr,up;
-double *xb,*yb,*xr,*yr;
+void fill_in(
+    int s1, int s2, int up,
+    double *xb, double *yb, int *nxb,
+    double *xr, double *yr, int *nxr)
 {
   int i;
   if(up==1) {
@@ -258,11 +262,11 @@ double *xb,*yb,*xr,*yr;
 }
 
 
-void post_filter(s,side,up,mark,xp,yp,buid,n,xb,yb,nxb,xr,yr,nxr)
-  
-  int *s,*up,*mark,*n,*nxb,*buid,*nxr,*side;
-double *xp,*yp,*xb,*yb,*xr,*yr;
-
+void post_filter(
+    int *s, int *side, int *up, int *mark,
+    double *xp, double *yp, int *buid, int *n,
+    double *xb, double *yb, int *nxb,
+    double *xr, double *yr, int *nxr)
 {
   int k1,k2,bp,ind;
   k1 = k2 = bp  = 0;
@@ -292,11 +296,12 @@ else k1++;
 
 /*  Defines the cutpoints of a line with a border */
 
-void define_line(x,y,xb,yb,xr,yr,n,nxb,nxr,plot,ab,ab1)
-  
-  double *x,*y,*xb,*yb,*xr,*yr,*ab,*ab1;
-int *n,*nxb,*nxr,*plot;
-
+void define_line(
+    double *x, double *y,
+    double *xb, double *yb,
+    double *xr, double *yr,
+    int *n, int *nxb, int *nxr, int *plot,
+    double *ab, double *ab1)
 {
   int i,j,i2[2],nsk[1],i1,side[50],order[50],i3,nxr0;
   double xs[50],ys[50],ts[50],ss[50];
@@ -332,10 +337,14 @@ int *n,*nxb,*nxr,*plot;
 
 /* Take number of line_segments and define cut points */
 
-void define_multiline(x,y,xb,yb,xr,yr,n,nxb,nxr,li1,li2,nlx,plot,ab,ab1) 
-  
-  double *x,*y,*xb,*yb,*xr,*yr,*ab,*ab1;
-int *n,*nxb,*nxr,*li1,*li2,*nlx,*plot;
+void define_multiline(
+    double *x, double *y,
+    double *xb, double *yb,
+    double *xr, double *yr,
+    int *n, int *nxb, int *nxr,
+    int *li1, int *li2, int *nlx,
+    int *plot,
+    double *ab, double *ab1)
 {
   int i1,i2,i,n1;
   for(i=0;i<*nlx;i++) {
@@ -369,8 +378,7 @@ int *n,*nxb,*nxr,*li1,*li2,*nlx,*plot;
 /* } */
 
 
-double distance_x(x,y,x1,y1)
-  double	x,y,x1,y1;
+double distance_x(double x, double y, double x1, double y1)
 {
     double  dist;
     dist=sqrt((x-x1)*(x-x1)+(y-y1)*(y-y1));
@@ -378,8 +386,8 @@ double distance_x(x,y,x1,y1)
     
 }
 
-double distance(lat,lon,lat1,lon1)
-  double	lat,lon,lat1,lon1;
+
+double distance(double lat, double lon, double lat1, double lon1)
 {
     double 	dist,rad = 6367,tiny=1e-8;  /* radius of earth in km.  */
 if((fabs(lat-lat1)+fabs(lon-lon1))<tiny)dist= 0; 
@@ -391,9 +399,7 @@ return(dist);
 
 /* 	spherical program that calculates spherical variogram. */
 
-double spherical(dist,range,sill,nugget)
-  double dist,range,sill,nugget;
-
+double spherical(double dist, double range, double sill, double nugget)
   {
     double	 x,cs;
     x = dist/range ;
@@ -406,10 +412,12 @@ double spherical(dist,range,sill,nugget)
   
   
   
-  void covmat(lat,lon,finallist,maxnr,vgr,cov,isub,subareas,dst)
-    double 	*lat,*lon,*cov,*vgr;
-  int	*finallist,maxnr,*isub,*subareas;
-  double  (*dst)();
+void covmat(
+    double *lat, double *lon,
+    int *finallist, int maxnr,
+    double *vgr, double *cov,
+    int *isub, int *subareas,
+    double (*dst)(double, double, double, double))
   {
     int 	i,j;
     double	dist;
@@ -440,11 +448,11 @@ double spherical(dist,range,sill,nugget)
   
   
   
-  void rightside(lat,lon,finallist,latgr,longr,maxnr,vgr,rhgtside,dst)
-    double 	*lat,*lon,*rhgtside,latgr,longr,*vgr;
-  int	*finallist,maxnr;
-  double  (*dst)();
-  
+void rightside(
+    double *lat, double *lon,
+    int *finallist, double latgr, double longr,
+    int maxnr, double *vgr, double *rhgtside,
+    double (*dst)(double, double, double, double))
   {
     int	i;
     double 	dist;
@@ -460,9 +468,7 @@ double spherical(dist,range,sill,nugget)
   
   
   
-  void ludcmp(a,n,indx,d,vv)
-    int n,*indx;
-  double *a,*d,*vv;
+void ludcmp(double *a, int n, int *indx, double *d, double *vv)
   {
     int i,imax=0,j,k;
     double big,dum,sum,temp;
@@ -514,9 +520,7 @@ double spherical(dist,range,sill,nugget)
   
   
   
-  void lubksb(a,n,indx,b)
-    double	 *a,*b;
-  int	 n,*indx;
+void lubksb(double *a, int n, int *indx, double *b)
   {
     int i,ii=-1,ip,j;
     double sum;
@@ -538,10 +542,7 @@ double spherical(dist,range,sill,nugget)
   }
   
   
-  void solve(a,b,d,n,indx,v)
-    double	*a,*b,*d,*v;
-  int 	*n,*indx;
-  
+void solve(double *a, double *b, double *d, int *n, int *indx, double *v)
   {
     ludcmp(a,*n,indx,d,v);
     lubksb(a,*n,indx,b);
@@ -597,11 +598,10 @@ double spherical(dist,range,sill,nugget)
   
   /* example of a c program called by Splus.*/
   
-  void capply(a,na,index,index1,nr,nc,operation,outcome,number)
-    
-    double	*a,*outcome;
-  int	*na,*nr,*nc,*index,*index1,*operation,*number;
-  
+void capply(
+    double *a, int *na, int *index, int *index1,
+    int *nr, int *nc, int *operation,
+    double *outcome, int *number)
   {
     
     int	i;
@@ -622,10 +622,7 @@ double spherical(dist,range,sill,nugget)
   
   
   
-  void element(nx,ny,el,nel) 
-    
-    int     nx,ny,nel,el[][4];
-  
+void element(int nx, int ny, int el[][4])
     {
       
       int i,j;
@@ -641,11 +638,7 @@ double spherical(dist,range,sill,nugget)
     }
     
     
-    void csort(z,ind)  /*  sort the values */
-  
-  double *z;
-    int *ind;
-    
+void csort(double *z, int *ind)
     {
       int     i1[3]={0,0,0},i;
       
@@ -665,10 +658,7 @@ double spherical(dist,range,sill,nugget)
       for (i=0;i<=2;i++){ind[i]=i1[i];}
     }
     
-    void sort(arrinn,m,indxx)
-      int     *m,*indxx;
-    double  *arrinn;
-    
+void sort(double *arrinn, int *m, int *indxx)
     {
       int l,j,ir,indxt,i,n,*indx;
       double q,*arrin;
@@ -704,18 +694,34 @@ double spherical(dist,range,sill,nugget)
       }
     }
     
-    void triangle(x1,y1,z1,x2,y2,z2,x3,y3,z3,polyx,polyy,npoly,ncont,cont)
-      
-      double  x1,y1,z1,x2,y2,z2,x3,y3,z3,*cont,polyy[][6],polyx[][6];
-    int     npoly[],ncont;
+  /*  
+     Subroutine to find the intersection of a line with a triangle and to 
+     construct a polygon.  
+     
+     Parameters:
+     x1,y1,z1  double   coordinates of first point of triangle
+     x2,y2,z2  double   coordinates of second point of triangle
+     x3,y3,z3  double   coordinates of third point of triangle
+     polyx     double   array of x coordinates of the polygon
+     polyy     double   array of y coordinates of the polygon
+     npoly     integer  number of points in each polygon
+     ncont     integer  number of contour lines
+     cont      double   array of contour lines
+   */
+void triangle(
+    double x1, double y1, double z1,
+    double x2, double y2, double z2,
+    double x3, double y3, double z3,
+    double polyx[][6], double polyy[][6],
+    int *npoly, int ncont,double *cont)
     {
-      int i,ind,indmax,nct12,nct23,nct13,nc12[160],nc13[160],nc23[160];
+      int i,ind,indmax,nct13,nc12[160],nc13[160],nc23[160];
       double xc12[160],yc12[160],xc23[160],yc23[160],xc13[160],yc13[160],rat,rat1;
       
       for(i =0 ; i<=ncont-1; i++){
         nc13[i]=0;nc12[i]=0;nc23[i]=0;
       }
-      nct12=0;nct13=0;nct23=0;ind=0;indmax=0; 
+      nct13=0;ind=0;indmax=0; 
       
       
       /* find intersection of lines with edges of triangles.   */
@@ -732,7 +738,7 @@ double spherical(dist,range,sill,nugget)
           yc12[i] = y1 + rat*(y2-y1) ; 
           xc13[i] = x1 + rat1*(x3-x1) ; 
           yc13[i] = y1 + rat1*(y3-y1) ;
-          nct12++ ; nct13++;nc12[i]++;nc13[i]++;
+          nct13++;nc12[i]++;nc13[i]++;
         }
         else if( cont[i] > z2 && cont[i] < z3 ) {       
           if(ind==0) ind=i;       
@@ -742,7 +748,7 @@ double spherical(dist,range,sill,nugget)
           yc23[i] = y2 + rat*(y3-y2) ; 
           xc13[i] = x1 + rat1*(x3-x1) ; 
           yc13[i] = y1 + rat1*(y3-y1) ; 
-          nct23++ ; nct13++;nc23[i]++;nc13[i]++;
+          nct13++;nc23[i]++;nc13[i]++;
         }
       }
       /*      Make the polygons.  */
@@ -848,13 +854,14 @@ double spherical(dist,range,sill,nugget)
     /*  elcont divides each rectangle into 4 triangles and finds the
      location of the contour lines in the rectangle.  */
     
-    void elcont(x1,y1,z1,lx1,nx,ny,cont,ncont,polyx,polyy,el,nel,
-                maxsize,err,inni,cutreg,indd,white)   
-      
-      double *x1,*y1,*z1,*cont,*polyx,*polyy;
-    int *nx,*ny,*ncont,*lx1,*nel,el[][4],*maxsize,*err,
-    *inni,*cutreg,*indd,*white;
-    
+void elcont(
+    double *x1, double *y1, double *z1,
+    int *lx1, int *nx, int *ny,
+    double *cont, int *ncont,
+    double *polyx, double *polyy,
+    int el[][4], int *nel, int *maxsize,
+    int *err, int *inni, int *cutreg,
+    int *indd, int *white)
     {
       
       
@@ -868,7 +875,7 @@ double spherical(dist,range,sill,nugget)
       
       cind=0 ;
       *nel= (*nx-1)*(*ny-1);
-      element(*nx,*ny,el,*nel);  /* find the number of elements */
+      element(*nx,*ny,el);  /* find the number of elements */
     
     for(i=0 ; i<=*nel-1 ; i++){
       
@@ -1000,17 +1007,18 @@ double spherical(dist,range,sill,nugget)
     /* Function that marks propable points in the neighbourhood of a point
      that is to be estimated.            */
     
-    double distance(),spherical(),distance_x();
+
     /*void covmat(),rightside(),sort_c(),solve();*/
     
     
-    void neighbour(nr,reitur,n,m,npts_in_reit,pts_in_reit,indrt,maxnr,stdcrt,stdrrt,
-                   dir,i1,li1,list,nlist,ldir,rat,isub,isubgr,subareas)
-      
-      int     nr,*reitur,*npts_in_reit,*pts_in_reit,maxnr,*list,*nlist,n,m,
-      *stdcrt,*stdrrt,*dir,*ldir,*indrt,*i1,li1,*isub,*isubgr,*subareas;
-    double  rat;
-    
+void neighbour(
+    int nr, int *reitur, int n, int m,
+    int *npts_in_reit, int *pts_in_reit, int *indrt,
+    int maxnr, int *stdcrt, int *stdrrt, int *dir,
+    int *i1, int li1,
+    int *list, int *nlist, int *ldir,
+    double rat,
+    int *isub, int *isubgr, int *subareas)
     {
       int colnr,rownr,i,j1,crt,rrt,k,rt,j,nrt=0,sub=0,m1,qua[5];    
       
@@ -1059,14 +1067,16 @@ double spherical(dist,range,sill,nugget)
      Function that selects the best points according to certain
      criteria from a list returned by the program neighbour.   */
     
-    void select_pts(latgr,longr,list,ldir,nlist,lat,lon,maxnr,option,finallist,nr,treitur,maxdist,order,dist,
-                    xnewint,dst)
-      
-      double     latgr,longr,*lat,*lon,*maxdist,*dist;
-    int        *list,*ldir,nlist,*finallist,*maxnr,option,nr,*treitur,*order,*xnewint;
-    double  (*dst)();
-    
-    {       
+void select_pts(
+    double latgr, double longr,
+    int *list, int *ldir, int nlist,
+    double *lat, double *lon,
+    int *maxnr, int option,
+    int *finallist, int nr, int *treitur,
+    double *maxdist, int *order, double *dist,
+    int *xnewint,
+    double (*dst)(double, double, double, double))
+        {       
       int   i,qua[5],k,j,minnumber,k1;
       minnumber = nlist/10; if(minnumber <2 && *maxnr >8 )minnumber=2;
       for(i=1;i<=4;i++)qua[i]=0;
@@ -1132,26 +1142,31 @@ double spherical(dist,range,sill,nugget)
      points to use.  
      */
     
-    void c_pointkriging(lat,lon,z,nlat,latgr,longr,zgr,nlatgr,reitur,n,m,pts_in_reit,
-                        npts_in_reit,maxnumber,vgr,stdcrt,stdrrt,dir,i1,li1,option,inni,
-                        cov,rhgtside,x,indrt,jrt,maxrt,treitur,rat,maxdist,mz,isub,isubgr,
-                        subareas,variance,varcalc,rhgtsbck,sill,minnumber,suboption,x_y,degree,lagrange,
-                        zeroset)
-      
-      double *lat,*lon,*latgr,*longr,*z,*vgr,*zgr,*cov,*x,*rhgtside,*maxdist,*rat,*mz,
-      *rhgtsbck,*sill,*variance,*lagrange;
-    
-    int        *reitur,*n,*m,*nlat,*nlatgr,*stdcrt,*stdrrt,*dir,*pts_in_reit,
-    *npts_in_reit,*option,*inni,*maxnumber,*indrt,*jrt,*maxrt,*i1,*li1,*treitur,
-    *isub,*isubgr,*subareas,*varcalc,*minnumber,*suboption,*x_y,*degree,*zeroset;
-    
-    
+void c_pointkriging(
+    double *lat, double *lon, double *z, int *nlat,
+    double *latgr, double *longr, double *zgr, int *nlatgr,
+    int *reitur, int *n, int *m,
+    int *pts_in_reit, int *npts_in_reit,
+    int *maxnumber, double *vgr,
+    int *stdcrt, int *stdrrt, int *dir, int *i1, int *li1,
+    int *option, int *inni,
+    double *cov, double *rhgtside, double *x,
+    int *indrt, int *jrt, int *maxrt,
+    int *treitur, double *rat, double *maxdist, double *mz,
+    int *isub, int *isubgr, int *subareas,
+    double *variance, int *varcalc, double *rhgtsbck,
+    double *sill, int *minnumber, int *suboption,
+    int *x_y, int *degree, double *lagrange, int *zeroset)
     {
       int   i,j,ldir[500],list[500],nlist,finallist[500],order[500],maxnr,
       xnewint[500];
-      double        dist[500],d,z1;
-      double (*dst)(); /* pointer to distance function */
-    if(*x_y==1) dst=distance_x;else dst=distance;
+      double dist[500],d,z1;
+      double (*dst)(double, double, double, double); /* pointer to distance function */
+    if(*x_y==1) 
+      dst=distance_x;
+    else 
+      dst=distance;
+    
     for ( i=0; i <*nlat;i++){  
       
       npts_in_reit[reitur[i]]++;
@@ -1225,15 +1240,14 @@ double spherical(dist,range,sill,nugget)
      each small square defined by latgr and longr) median and sdev later
      */
     
-    void combinert(lat,lon,z,nlat,reitur,pts_in_reit,npts_in_reit,indrt,jrt,maxrt,
-                   newlat,newlon,newz,newn,nnewlat,option,fill,fylla,grdlat,grdlon,n,minnumber,
-                   wsp,nr,order,wlat,rat,wz)
-      
-      double	*lat,*lon,*z,*newlat,*newlon,*newz,*grdlat,*grdlon,*wsp,*wz,*wlat,*rat;
-    
-    int *nlat,*reitur,*pts_in_reit,*npts_in_reit,*indrt,*jrt,*maxrt,*nnewlat,*option,*newn,
-    *fill,*fylla,*n,*minnumber,*nr,*order;
-    
+void combinert(
+    double *lat, double *lon, double *z, int *nlat,
+    int *reitur, int *pts_in_reit, int *npts_in_reit,
+    int *indrt, int *jrt, int *maxrt,
+    double *newlat, double *newlon, double *newz,
+    int *newn, int *nnewlat, int *option, int *fill, int *fylla,
+    double *grdlat, double *grdlon, int *n, int *minnumber,
+    double *wsp, int *nr, int *order, double *wlat, double *rat, double *wz)
     {
       int	i,j,k,m1,rnr,cnr,nr_out,nr1_out,j1;
       double 	tmp,tmp1,tmp2=0.0;
@@ -1508,17 +1522,18 @@ double spherical(dist,range,sill,nugget)
     /*# 	include	<math.h>*/
     /* 	Function that calculates variogram.  */
     
-    double distance(),distance_x();
+
     
-    
-    void c_variogram(lat,lon,z,d_dist,number,dist,vario,n,ndist,option,evennumber,varioa,dista,numbera,zzp,xy)
-      double 	*lat,*lon,*z,*d_dist,*dist,*vario,*dista,*varioa;
-    int  	*number,*n,*ndist,*evennumber,*numbera,*option,*zzp,*xy;
-    
+void c_variogram(
+    double *lat, double *lon, double *z,
+    double *d_dist, int *number, double *dist, double *vario,
+    int *n, int *ndist, int *option, int *evennumber,
+    double *varioa, double *dista, int *numbera,
+    int *zzp, int *xy)
     {
       int 	i,j,ind,tel=0,fjoldi,k=0;
       double	d,diff,v1,v2,tiny;
-      double  (*dst)();
+      double  (*dst)(double, double, double, double);
       
       tiny=1e-5;
       if(*xy==1) dst=distance_x;else dst=distance;
@@ -1574,8 +1589,9 @@ double spherical(dist,range,sill,nugget)
      x2,y2.  
      */
     
-    void orthproj(x1,y1,x2,y2,x,y,d3,pardist,perdist)
-      double x1,y1,x2,y2,x,y,*d3,*pardist,*perdist;
+void orthproj(double x1, double y1, double x2, double y2,
+              double x, double y,
+              double *d3, double *pardist, double *perdist)
     {
         double d1,d2,d;
         d1 = (x - x1)*(x - x1) + (y - y1)*(y - y1);
@@ -1594,9 +1610,9 @@ double spherical(dist,range,sill,nugget)
      returns both distance from curve and distance along curve.  
      */
     
-    void Curvedist(xc,yc,dc,nc,xp,yp,dp,mindist,np)
-      double *xc,*yc,*dc,*xp,*yp,*dp,*mindist;
-    int *nc,*np;
+void Curvedist(const double *xc, const double *yc, const double *dc, const int *nc,
+               const double *xp, const double *yp, const int *np,
+               double *dp, double *mindist)
     {
       int i,j;
       double d,perdist=0.0,pardist=0.0;

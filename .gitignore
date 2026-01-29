@@ -6,3 +6,14 @@ geo.Rproj
 src/geo.o
 src/geo.so
 docs
+*.tar.gz
+*.Rcheck
+..Rcheck
+geo.Rcheck
+Rplots.pdf
+README.html
+tmp.png
+gh_pages
+gh_pages.pub
+vignettes/*.html
+tests/testthat/Rplots.pdf

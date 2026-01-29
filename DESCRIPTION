@@ -6,12 +6,19 @@ Author: Hoskuldur Bjornsson, Sigurdur Thor Jonsson, Arni Magnusson, and Bjarki
   Thor Elvarsson
 Maintainer: Bjarki Elvarsson <bjarki.elvarsson@hafogvatn.is>
 Depends: maps, mapdata, R (>= 2.10.0)
-Imports: splines, methods, utils, grDevices, graphics, stats
+Imports: splines, methods, utils, grDevices, graphics, stats, polyclip, isoband, Rcpp
+LinkingTo: Rcpp, RcppArmadillo
 LazyData: yes
-LazyDataCompression:gzip
+LazyDataCompression: gzip
 Description: Used by Hafro staff to draw maps showing the distribution of
   fishing intensity and catches, and of survey data for Icelandic fish stocks.
   Potentially useful for others.
 License: GPL (>= 2)
 Encoding: UTF-8
 RoxygenNote: 7.2.2
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr

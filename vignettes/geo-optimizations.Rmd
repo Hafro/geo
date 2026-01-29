@@ -1,0 +1,130 @@
+---
+title: "Speed and Maintainability Optimizations"
+author: "geo maintainers"
+date: "2026-01-28"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Speed and Maintainability Optimizations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## Overview
+
+This vignette documents the recent performance and maintainability work
+focused on `geolines()` and the clipping pipeline used by map drawing. The
+changes were driven by profiling results that showed clipping dominated runtime
+for large line datasets.
+
+Key improvements:
+
+- A fast rectangle clipper used by `geolines()` in the common case where the
+  plot border is axis-aligned.
+- A new C++ polygon clipper for non-rectangular borders.
+- Reduced allocation and early-out checks in the legacy R clipping path.
+- An opt-in cache in `geolines()` for repeated draws with identical inputs.
+- Lightweight profiling and benchmark scripts in `tests/perf/`.
+
+## Rectangle clipping fast path
+
+`geolines()` typically clips lines against the plot border, which is an axis-
+aligned rectangle derived from `geopar$limx` and `geopar$limy`. The new path
+recognizes this case and uses a Liang–Barsky style segment clipper to handle
+segments in O(1) time per segment.
+
+- R fallback: `geo_clip_polyline_to_rect()`
+- C++ implementation: `geo_clip_polyline_to_rect_cpp()`
+
+The C++ path is used automatically when available.
+
+## Polygon clipping in C++
+
+For non-rectangular borders (e.g., irregular masks), the package now uses a C++
+implementation of the existing R algorithm:
+
+- C++ implementation: `geo_clip_polyline_to_polygon_cpp()`
+- R wrapper with fallback: `geo_clip_polyline_to_polygon()`
+
+The C++ version mirrors the R logic, including polygon closure and segment
+splitting at intersections, while reducing overhead from repeated allocations.
+
+## Allocation reductions and early-outs
+
+The R implementation was adjusted to reduce vector growth and to skip segments
+that cannot intersect the polygon based on bounding boxes. These improvements
+remain as a fallback when C++ is not available and aid maintainability by
+keeping the R version clear and consistent with the C++ logic.
+
+## Optional caching in `geolines()`
+
+`geolines()` now accepts a `cache` flag. When `cache = TRUE`, the function
+stores the last `(projected line, border)` pair and reuses the clipped result
+if an identical request is repeated.
+
+This is intended for interactive workflows where the same geometry is drawn
+multiple times with identical inputs.
+
+## How to reproduce profiling and benchmarks
+
+The repository includes small scripts in `tests/perf/` that exercise common
+paths. These are not run by default during testing.
+
+```{r profile-geolines, eval=FALSE}
+# Install into a temp library
+R
+CMD
+INSTALL - l / tmp / geo - lib
+.
+
+# Profile geolines in a typical rectangular clipping scenario
+Rscript
+tests / perf / profile - geolines.R / tmp / geo - lib
+```
+
+```{r bench-geolines, eval=FALSE}
+# Quick timing of geolines with the rectangle clipper
+Rscript
+tests / perf / bench - geolines.R / tmp / geo - lib
+```
+
+```{r bench-polygon, eval=FALSE}
+# Benchmark polygon clipping
+Rscript
+tests / perf / bench - clip - polygon.R / tmp / geo - lib
+
+# Compare C++ vs local R reference implementation
+Rscript
+tests / perf / bench - clip - polygon - compare.R / tmp / geo - lib
+```
+
+## Example local results
+
+The following numbers are from local runs on a single developer machine and are
+included to show the magnitude of improvement, not as guaranteed performance.
+
+| Scenario | Metric | Before (R rect clip) | After (C++ rect clip) |
+|---|---|---:|---:|
+| `geolines()` benchmark | Median elapsed (n=10) | 0.3265s | 0.0470s |
+| `geolines()` profile | Total time (10 draws) | 3.33s | 0.48s |
+
+| Scenario | Metric | R polygon clip | C++ polygon clip |
+|---|---|---:|---:|
+| Polygon clip benchmark | Median elapsed (n=25) | 24.0 ms | <0.5 ms (<500 us) |
+| Polygon clip benchmark | Mean elapsed (n=25) | 26.0 ms | 0.12 ms (120 us) |
+| Polygon clip benchmark | Mean speedup | 1x | ~217x |
+
+## Notes on correctness
+
+New tests validate that the fast rectangle path and the C++ polygon clipper
+match the expected behavior of the original R implementation. These tests are
+located in `tests/testthat/` and run as part of the normal test suite.
+
+## Future directions
+
+After these changes, the main remaining hotspot for `geolines()` in local
+profiling is `plot.xy`. Additional speedups may be possible through caching of
+projected or clipped geometry in higher-level plotting workflows.

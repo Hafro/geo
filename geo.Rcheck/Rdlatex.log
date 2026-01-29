@@ -1,0 +1,934 @@
+Hmm ... looks like a package
+Converting parsed Rd's to LaTeX ...............
+Creating pdf output from LaTeX ...
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
+(./Rd2.tex
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo)) (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/mathrsfs.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file Rd2.idx
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file Rd2.aux.
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+No file Rd2.toc.
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+[1{/Users/bthe/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+Overfull \hbox (27.89876pt too wide) in paragraph at lines 89--91
+[]\T1/ptm/m/n/10 Needs fur-ther elab-o-ra-tion, this func-tion is called by []\T1/zi4/m/n/10 geoarea.old[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 geoinside[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 inside []\T1/ptm/m/n/10 and []\T1/zi4/m/n/10 pointkriging[]\T1/ptm/m/n/10 . 
+
+[2]
+[3]
+[4]
+[5]
+[6]
+[7]
+[8]
+[9]
+[10]
+[11]
+[12]
+[13]
+[14]
+[15]
+[16]
+Overfull \hbox (2.31694pt too wide) in paragraph at lines 1020--1022
+[]\T1/ptm/m/n/10 The de-fault []\T1/zi4/m/n/10 useI=FALSE []\T1/ptm/m/n/10 is in ac-cor-dance with the pre-scrip-tion in ICES CM77/Gen:3, but []\T1/zi4/m/n/10 useI=TRUE
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd) [17]
+[18] (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd)
+[19{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}]
+[20]
+[21]
+[22]
+Overfull \hbox (1.03812pt too wide) in paragraph at lines 1372--1376
+\T1/ptm/m/n/10 sign-ment to a ma-trix with an index-matrix of the val-ues in rownr and dalknr: []\T1/zi4/m/n/10 mat[matrix(c(rownr,
+
+[23]
+[24]
+[25]
+[26]
+[27]
+[28]
+[29]
+[30]
+[31]
+[32]
+[33]
+[34]
+[35]
+[36]
+[37]
+[38]
+[39]
+[40]
+[41]
+[42]
+[43]
+[44]
+Overfull \hbox (18.44104pt too wide) in paragraph at lines 2658--2662
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour[][][][]\T1/ptm/m/n/10 ,
+
+[45]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[46]
+Overfull \hbox (4.57668pt too wide) in paragraph at lines 2770--2772
+[]\T1/ptm/m/n/10 Convert be-tween dif-fer-ent rep-re-sen-ta-tions of lat-i-tude and lon-gi-tude, namely degrees-minutes-decimal
+
+[47]
+[48
+pdfTeX warning (ext4): destination with the same identifier (name{Rfn.geoconvert.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2874 \end{Description}
+                        ]
+[49]
+[50]
+[51]
+[52]
+Overfull \hbox (7.02832pt too wide) in paragraph at lines 3162--3164
+[]\T1/ptm/m/n/10 Coordinates of points. The co-or-di-nates can be given by two vec-tors or a data.frame
+
+[53]
+[54]
+[55]
+[56]
+[57]
+Overfull \hbox (16.67775pt too wide) in paragraph at lines 3487--3489
+[]\T1/ptm/m/n/10 The pro-jec-tion is stored in geop-arpro-jec-tion and pa-ram-e-ters for the trans-form in []\T1/zi4/m/n/10 geopar$b0, geopar$b1
+
+Overfull \hbox (13.92102pt too wide) in paragraph at lines 3492--3496
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour[][][][]\T1/ptm/m/n/10 . 
+
+[58]
+[59]
+[60]
+[61]
+Overfull \hbox (35.35013pt too wide) in paragraph at lines 3705--3705
+[]\T1/zi4/m/n/10 points (iceland) 2. bisland 20000 points (iceland fine) 3. greenland 62000 
+
+Overfull \hbox (35.35013pt too wide) in paragraph at lines 3705--3705
+[]\T1/zi4/m/n/10 points 4. faeroes 2100 points 5. eyjar 2200 points(islands around iceland) 
+
+[62]
+[63]
+Overfull \hbox (3.92102pt too wide) in paragraph at lines 3856--3861
+[][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 ,
+
+[64]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[65]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[66]
+[67]
+[68]
+[69]
+[70]
+[71]
+[72]
+[73]
+[74]
+[75]
+[76]
+[77]
+[78]
+[79]
+Overfull \hbox (3.92102pt too wide) in paragraph at lines 4893--4897
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 ,
+
+[80]
+[81]
+Overfull \hbox (23.09036pt too wide) in paragraph at lines 4965--4965
+ []  \T1/zi4/m/n/10 col.names = c("kastad.n.breidd", "kastad.v.lengd", "hift.n.breidd", "hift.v.lengd"),[] 
+
+Overfull \hbox (11.0386pt too wide) in paragraph at lines 4973--4976
+[]\T1/zi4/m/n/10 lat []\T1/ptm/m/n/10 and []\T1/zi4/m/n/10 lon []\T1/ptm/m/n/10 or dataframe with start and end po-si-tions given as columns []\T1/zi4/m/n/10 col.names[]\T1/ptm/m/n/10 . 
+
+[82]
+[83]
+[84]
+[85]
+[86]
+Overfull \hbox (3.31831pt too wide) in paragraph at lines 5320--5322
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the []\T1/zi4/m/n/10 l1 []\T1/ptm/m/n/10 de-fined in geopar,
+
+[87]
+[88]
+Overfull \hbox (1.21823pt too wide) in paragraph at lines 5406--5408
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the []\T1/zi4/m/n/10 l1 []\T1/ptm/m/n/10 de-fined in geopar 
+
+[89]
+[90]
+[91]
+[92]
+[93]
+[94]
+[95]
+[96]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[97]
+[98]
+[99]
+[100]
+Overfull \hbox (0.9482pt too wide) in paragraph at lines 6123--6125
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the l1 de-fined in geopar. 
+
+[101]
+[102]
+[103]
+[104]
+[105]
+[106]
+[107]
+[108]
+[109]
+[110]
+[111]
+[112]
+[113]
+[114]
+[115]
+[116]
+[117]
+[118]
+Overfull \hbox (0.9482pt too wide) in paragraph at lines 7192--7194
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the l1 de-fined in geopar. 
+
+[119]
+[120]
+[121]
+[122]
+[123]
+[124]
+[125]
+[126]
+Overfull \hbox (23.85739pt too wide) in paragraph at lines 7734--7737
+[]\T1/ptm/m/n/10 Objects []\T1/zi4/m/n/10 Totalreitir []\T1/ptm/m/n/10 con-tain-ing a list of all rect-an-gles com-petely con-tained in bc-areas and []\T1/zi4/m/n/10 Dypisreitir
+
+[127]
+[128]
+[129]
+[130]
+[131]
+[132]
+[133]
+[134]
+Overfull \hbox (15.71973pt too wide) in paragraph at lines 8209--8212
+[]\T1/ptm/m/n/10 Calls a num-ber of func-tions, i.e. [][][]\T1/zi4/m/n/10 geodefine[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 gridpoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 inside[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 selectedpar[][][] 
+
+[135]
+[136]
+[137]
+[138]
+[139]
+[140]
+[141]
+No file Rd2.ind.
+
+[142] (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{Rfn.lines} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.write} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.cat} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.spline.des} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.chartr} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.data.frame} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.par} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.colorRampPalette} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.polygon} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.points} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.hsv} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.locator} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.legend} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.identify} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.expand.grid} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.ns} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.contour} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.chull} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.grid} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.merge} has been referenced but does not exist, replaced by a fixed one
+
+</Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (142 pages, 338480 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.17 [TeX Live 2025] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (686 entries accepted, 0 rejected).
+Sorting entries........done (7115 comparisons).
+Generating output file Rd2.ind....done (704 lines written, 8 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
+(./Rd2.tex
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo)) (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/mathrsfs.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file Rd2.idx
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.aux) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.out) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.out) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.toc (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+[1{/Users/bthe/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+[2]
+[3])
+[4]
+Overfull \hbox (27.89876pt too wide) in paragraph at lines 89--91
+[]\T1/ptm/m/n/10 Needs fur-ther elab-o-ra-tion, this func-tion is called by []\T1/zi4/m/n/10 geoarea.old[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 geoinside[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 inside []\T1/ptm/m/n/10 and []\T1/zi4/m/n/10 pointkriging[]\T1/ptm/m/n/10 . 
+
+[5]
+[6]
+[7]
+[8]
+[9]
+[10]
+[11]
+[12]
+[13]
+[14]
+[15]
+[16]
+[17]
+[18]
+[19]
+Overfull \hbox (2.31694pt too wide) in paragraph at lines 1020--1022
+[]\T1/ptm/m/n/10 The de-fault []\T1/zi4/m/n/10 useI=FALSE []\T1/ptm/m/n/10 is in ac-cor-dance with the pre-scrip-tion in ICES CM77/Gen:3, but []\T1/zi4/m/n/10 useI=TRUE
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd) [20]
+[21] (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd)
+[22{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}]
+[23]
+[24]
+[25]
+Overfull \hbox (1.03812pt too wide) in paragraph at lines 1372--1376
+\T1/ptm/m/n/10 sign-ment to a ma-trix with an index-matrix of the val-ues in rownr and dalknr: []\T1/zi4/m/n/10 mat[matrix(c(rownr,
+
+[26]
+[27]
+[28]
+[29]
+[30]
+[31]
+[32]
+[33]
+[34]
+[35]
+[36]
+[37]
+[38]
+[39]
+[40]
+[41]
+[42]
+[43]
+[44]
+[45]
+[46]
+[47]
+Overfull \hbox (18.44104pt too wide) in paragraph at lines 2658--2662
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour[][][][]\T1/ptm/m/n/10 ,
+
+[48]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[49]
+Overfull \hbox (4.57668pt too wide) in paragraph at lines 2770--2772
+[]\T1/ptm/m/n/10 Convert be-tween dif-fer-ent rep-re-sen-ta-tions of lat-i-tude and lon-gi-tude, namely degrees-minutes-decimal
+
+[50]
+[51
+pdfTeX warning (ext4): destination with the same identifier (name{Rfn.geoconvert.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2874 \end{Description}
+                        ]
+[52]
+[53]
+[54]
+[55]
+Overfull \hbox (7.02832pt too wide) in paragraph at lines 3162--3164
+[]\T1/ptm/m/n/10 Coordinates of points. The co-or-di-nates can be given by two vec-tors or a data.frame
+
+[56]
+[57]
+[58]
+[59]
+[60]
+Overfull \hbox (16.67775pt too wide) in paragraph at lines 3487--3489
+[]\T1/ptm/m/n/10 The pro-jec-tion is stored in geop-arpro-jec-tion and pa-ram-e-ters for the trans-form in []\T1/zi4/m/n/10 geopar$b0, geopar$b1
+
+Overfull \hbox (13.92102pt too wide) in paragraph at lines 3492--3496
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour[][][][]\T1/ptm/m/n/10 . 
+
+[61]
+[62]
+[63]
+[64]
+Overfull \hbox (35.35013pt too wide) in paragraph at lines 3705--3705
+[]\T1/zi4/m/n/10 points (iceland) 2. bisland 20000 points (iceland fine) 3. greenland 62000 
+
+Overfull \hbox (35.35013pt too wide) in paragraph at lines 3705--3705
+[]\T1/zi4/m/n/10 points 4. faeroes 2100 points 5. eyjar 2200 points(islands around iceland) 
+
+[65]
+[66]
+Overfull \hbox (3.92102pt too wide) in paragraph at lines 3856--3861
+[][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 ,
+
+[67]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[68]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[69]
+[70]
+[71]
+[72]
+[73]
+[74]
+[75]
+[76]
+[77]
+[78]
+[79]
+[80]
+[81]
+[82]
+Overfull \hbox (3.92102pt too wide) in paragraph at lines 4893--4897
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 ,
+
+[83]
+[84]
+Overfull \hbox (23.09036pt too wide) in paragraph at lines 4965--4965
+ []  \T1/zi4/m/n/10 col.names = c("kastad.n.breidd", "kastad.v.lengd", "hift.n.breidd", "hift.v.lengd"),[] 
+
+Overfull \hbox (11.0386pt too wide) in paragraph at lines 4973--4976
+[]\T1/zi4/m/n/10 lat []\T1/ptm/m/n/10 and []\T1/zi4/m/n/10 lon []\T1/ptm/m/n/10 or dataframe with start and end po-si-tions given as columns []\T1/zi4/m/n/10 col.names[]\T1/ptm/m/n/10 . 
+
+[85]
+[86]
+[87]
+[88]
+[89]
+Overfull \hbox (3.31831pt too wide) in paragraph at lines 5320--5322
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the []\T1/zi4/m/n/10 l1 []\T1/ptm/m/n/10 de-fined in geopar,
+
+[90]
+[91]
+Overfull \hbox (1.21823pt too wide) in paragraph at lines 5406--5408
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the []\T1/zi4/m/n/10 l1 []\T1/ptm/m/n/10 de-fined in geopar 
+
+[92]
+[93]
+[94]
+[95]
+[96]
+[97]
+[98]
+[99]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[100]
+[101]
+[102]
+[103]
+Overfull \hbox (0.9482pt too wide) in paragraph at lines 6123--6125
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the l1 de-fined in geopar. 
+
+[104]
+[105]
+[106]
+[107]
+[108]
+[109]
+[110]
+[111]
+[112]
+[113]
+[114]
+[115]
+[116]
+[117]
+[118]
+[119]
+[120]
+[121]
+Overfull \hbox (0.9482pt too wide) in paragraph at lines 7192--7194
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the l1 de-fined in geopar. 
+
+[122]
+[123]
+[124]
+[125]
+[126]
+[127]
+[128]
+[129]
+Overfull \hbox (23.85739pt too wide) in paragraph at lines 7734--7737
+[]\T1/ptm/m/n/10 Objects []\T1/zi4/m/n/10 Totalreitir []\T1/ptm/m/n/10 con-tain-ing a list of all rect-an-gles com-petely con-tained in bc-areas and []\T1/zi4/m/n/10 Dypisreitir
+
+[130]
+[131]
+[132]
+[133]
+[134]
+[135]
+[136]
+[137]
+Overfull \hbox (15.71973pt too wide) in paragraph at lines 8209--8212
+[]\T1/ptm/m/n/10 Calls a num-ber of func-tions, i.e. [][][]\T1/zi4/m/n/10 geodefine[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 gridpoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 inside[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 selectedpar[][][] 
+
+[138]
+[139]
+[140]
+[141]
+[142]
+[143]
+[144] (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.ind
+[145]
+
+[146]
+
+[147]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 223.
+
+
+
+[148]
+
+[149]) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{Rfn.lines} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.write} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.cat} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.spline.des} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.chartr} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.data.frame} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.par} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.colorRampPalette} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.polygon} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.points} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.hsv} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.locator} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.legend} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.identify} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.expand.grid} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.ns} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.contour} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.chull} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.grid} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.merge} has been referenced but does not exist, replaced by a fixed one
+
+</Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (149 pages, 389457 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.17 [TeX Live 2025] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (686 entries accepted, 0 rejected).
+Sorting entries........done (7115 comparisons).
+Generating output file Rd2.ind....done (705 lines written, 8 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
+(./Rd2.tex
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/bk10.clo)) (/Library/Frameworks/R.framework/Resources/share/texmf/tex/latex/Rd.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/mathrsfs.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/Users/bthe/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file Rd2.idx
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.aux) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.out) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.out) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/t1zi4.fd) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.toc (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd) (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/jknapltx/ursfs.fd)
+[1{/Users/bthe/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}]
+[2]
+[3])
+[4]
+Overfull \hbox (27.89876pt too wide) in paragraph at lines 89--91
+[]\T1/ptm/m/n/10 Needs fur-ther elab-o-ra-tion, this func-tion is called by []\T1/zi4/m/n/10 geoarea.old[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 geoinside[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 inside []\T1/ptm/m/n/10 and []\T1/zi4/m/n/10 pointkriging[]\T1/ptm/m/n/10 . 
+
+[5]
+[6]
+[7]
+[8]
+[9]
+[10]
+[11]
+[12]
+[13]
+[14]
+[15]
+[16]
+[17]
+[18]
+[19]
+Overfull \hbox (2.31694pt too wide) in paragraph at lines 1020--1022
+[]\T1/ptm/m/n/10 The de-fault []\T1/zi4/m/n/10 useI=FALSE []\T1/ptm/m/n/10 is in ac-cor-dance with the pre-scrip-tion in ICES CM77/Gen:3, but []\T1/zi4/m/n/10 useI=TRUE
+(/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd) [20]
+[21] (/Users/bthe/Library/TinyTeX/texmf-dist/tex/latex/inconsolata/ts1zi4.fd)
+[22{/Users/bthe/Library/TinyTeX/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}]
+[23]
+[24]
+[25]
+Overfull \hbox (1.03812pt too wide) in paragraph at lines 1372--1376
+\T1/ptm/m/n/10 sign-ment to a ma-trix with an index-matrix of the val-ues in rownr and dalknr: []\T1/zi4/m/n/10 mat[matrix(c(rownr,
+
+[26]
+[27]
+[28]
+[29]
+[30]
+[31]
+[32]
+[33]
+[34]
+[35]
+[36]
+[37]
+[38]
+[39]
+[40]
+[41]
+[42]
+[43]
+[44]
+[45]
+[46]
+[47]
+Overfull \hbox (18.44104pt too wide) in paragraph at lines 2658--2662
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour[][][][]\T1/ptm/m/n/10 ,
+
+[48]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[49]
+Overfull \hbox (4.57668pt too wide) in paragraph at lines 2770--2772
+[]\T1/ptm/m/n/10 Convert be-tween dif-fer-ent rep-re-sen-ta-tions of lat-i-tude and lon-gi-tude, namely degrees-minutes-decimal
+
+[50]
+[51
+pdfTeX warning (ext4): destination with the same identifier (name{Rfn.geoconvert.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2874 \end{Description}
+                        ]
+[52]
+[53]
+[54]
+[55]
+Overfull \hbox (7.02832pt too wide) in paragraph at lines 3162--3164
+[]\T1/ptm/m/n/10 Coordinates of points. The co-or-di-nates can be given by two vec-tors or a data.frame
+
+[56]
+[57]
+[58]
+[59]
+[60]
+Overfull \hbox (16.67775pt too wide) in paragraph at lines 3487--3489
+[]\T1/ptm/m/n/10 The pro-jec-tion is stored in geop-arpro-jec-tion and pa-ram-e-ters for the trans-form in []\T1/zi4/m/n/10 geopar$b0, geopar$b1
+
+Overfull \hbox (13.92102pt too wide) in paragraph at lines 3492--3496
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour[][][][]\T1/ptm/m/n/10 . 
+
+[61]
+[62]
+[63]
+[64]
+Overfull \hbox (35.35013pt too wide) in paragraph at lines 3705--3705
+[]\T1/zi4/m/n/10 points (iceland) 2. bisland 20000 points (iceland fine) 3. greenland 62000 
+
+Overfull \hbox (35.35013pt too wide) in paragraph at lines 3705--3705
+[]\T1/zi4/m/n/10 points 4. faeroes 2100 points 5. eyjar 2200 points(islands around iceland) 
+
+[65]
+[66]
+Overfull \hbox (3.92102pt too wide) in paragraph at lines 3856--3861
+[][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geotext[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 ,
+
+[67]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[68]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[69]
+[70]
+[71]
+[72]
+[73]
+[74]
+[75]
+[76]
+[77]
+[78]
+[79]
+[80]
+[81]
+[82]
+Overfull \hbox (3.92102pt too wide) in paragraph at lines 4893--4897
+[][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopolygon[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolines[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geosymbols[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geogrid[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopar[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geocontour.fill[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geolocator[][][][]\T1/ptm/m/n/10 ,
+
+[83]
+[84]
+Overfull \hbox (23.09036pt too wide) in paragraph at lines 4965--4965
+ []  \T1/zi4/m/n/10 col.names = c("kastad.n.breidd", "kastad.v.lengd", "hift.n.breidd", "hift.v.lengd"),[] 
+
+Overfull \hbox (11.0386pt too wide) in paragraph at lines 4973--4976
+[]\T1/zi4/m/n/10 lat []\T1/ptm/m/n/10 and []\T1/zi4/m/n/10 lon []\T1/ptm/m/n/10 or dataframe with start and end po-si-tions given as columns []\T1/zi4/m/n/10 col.names[]\T1/ptm/m/n/10 . 
+
+[85]
+[86]
+[87]
+[88]
+[89]
+Overfull \hbox (3.31831pt too wide) in paragraph at lines 5320--5322
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the []\T1/zi4/m/n/10 l1 []\T1/ptm/m/n/10 de-fined in geopar,
+
+[90]
+[91]
+Overfull \hbox (1.21823pt too wide) in paragraph at lines 5406--5408
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the []\T1/zi4/m/n/10 l1 []\T1/ptm/m/n/10 de-fined in geopar 
+
+[92]
+[93]
+[94]
+[95]
+[96]
+[97]
+[98]
+[99]
+Underfull \vbox (badness 10000) has occurred while \output is active
+[100]
+[101]
+[102]
+[103]
+Overfull \hbox (0.9482pt too wide) in paragraph at lines 6123--6125
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the l1 de-fined in geopar. 
+
+[104]
+[105]
+[106]
+[107]
+[108]
+[109]
+[110]
+[111]
+[112]
+[113]
+[114]
+[115]
+[116]
+[117]
+[118]
+[119]
+[120]
+[121]
+Overfull \hbox (0.9482pt too wide) in paragraph at lines 7192--7194
+[]\T1/ptm/m/n/10 The lon-gi-tude defin-ing the Lam-bert pro-jec-tion, de-fault is the l1 de-fined in geopar. 
+
+[122]
+[123]
+[124]
+[125]
+[126]
+[127]
+[128]
+[129]
+Overfull \hbox (23.85739pt too wide) in paragraph at lines 7734--7737
+[]\T1/ptm/m/n/10 Objects []\T1/zi4/m/n/10 Totalreitir []\T1/ptm/m/n/10 con-tain-ing a list of all rect-an-gles com-petely con-tained in bc-areas and []\T1/zi4/m/n/10 Dypisreitir
+
+[130]
+[131]
+[132]
+[133]
+[134]
+[135]
+[136]
+[137]
+Overfull \hbox (15.71973pt too wide) in paragraph at lines 8209--8212
+[]\T1/ptm/m/n/10 Calls a num-ber of func-tions, i.e. [][][]\T1/zi4/m/n/10 geodefine[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geoplot[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 geopoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 gridpoints[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 inside[][][][]\T1/ptm/m/n/10 , [][][]\T1/zi4/m/n/10 selectedpar[][][] 
+
+[138]
+[139]
+[140]
+[141]
+[142]
+[143]
+[144] (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.ind
+[145]
+
+[146]
+
+[147]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 224.
+
+
+
+[148]
+
+[149]) (/private/var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T/Rtmpk2cB1c/Rd2pdf122e95b1e9b5a/Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{Rfn.lines} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.write} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.cat} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.spline.des} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.chartr} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.data.frame} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.par} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.colorRampPalette} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.polygon} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.points} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.hsv} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.locator} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.legend} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.identify} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.expand.grid} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.ns} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.contour} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.chull} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.grid} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.merge} has been referenced but does not exist, replaced by a fixed one
+
+</Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/bthe/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (149 pages, 389624 bytes).
+Transcript written on Rd2.log.
+Saving output to ‘geo-manual.pdf’ ...
+Done
+You may want to clean up by 'rm -Rf /var/folders/s9/vr220bhx6nd_yyq9w1mxfv1r0000gn/T//Rtmpk2cB1c/Rd2pdf122e95b1e9b5a'

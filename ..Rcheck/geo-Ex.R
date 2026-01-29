@@ -1,0 +1,2131 @@
+pkgname <- "geo"
+source(file.path(R.home("share"), "R", "examples-header.R"))
+options(warn = 1)
+library('geo')
+
+base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+cleanEx()
+nameEx("Arrow")
+### * Arrow
+
+flush(stderr()); flush(stdout())
+
+### Name: Arrow
+### Title: Add arrow to plot.
+### Aliases: Arrow
+### Keywords: aplot
+
+### ** Examples
+
+
+geoplot()
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=60,col="brown")
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=45,col="red")
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=30,col="green")
+Arrow(list(lat=c(65,65.5),lon=c(-19, -18)),angle=30,col="blue")
+
+
+
+
+cleanEx()
+nameEx("Proj")
+### * Proj
+
+flush(stderr()); flush(stdout())
+
+### Name: Proj
+### Title: Performs Mercator or Lambert projection of data.
+### Aliases: Proj
+
+### ** Examples
+
+
+  # For an example of use for this function see i.e. init() where
+  # it is called:
+## Not run: 
+##D   xgr <- Proj(lat, lon, scale, b0, b1, l1, projection)
+## End(Not run)
+
+
+
+
+cleanEx()
+nameEx("Rlitir")
+### * Rlitir
+
+flush(stderr()); flush(stdout())
+
+### Name: Rlitir
+### Title: Display colors.
+### Aliases: Rlitir
+### Keywords: color
+
+### ** Examples
+
+
+# simple, perhaps not so useful application with default palette:
+
+Rlitir(12, 1:144)
+
+# Define a palette with some colors:
+
+ramp <- colorRampPalette(c("khaki1", "gold", "orange", 
+  "darkorange2", "red", "darkred", "black"))
+
+# number of columns and rows to display
+
+n <- 10
+
+Rlitir(n, ramp(n^2))
+
+
+
+
+cleanEx()
+nameEx("apply.shrink")
+### * apply.shrink
+
+flush(stderr()); flush(stdout())
+
+### Name: apply.shrink
+### Title: Apply a function to a vector for a combination of categories.
+### Aliases: apply.shrink
+### Keywords: manip
+
+### ** Examples
+
+
+## stupid example, showing naming of results
+names(apply.shrink(depthloc$z, 
+  list(a=round(depthloc$lat), b=round(depthloc$lon)), mean))
+names(apply.shrink(depthloc$z, list(round(depthloc$lat), 
+  round(depthloc$lon)), mean, names = c("a", "b", "z")))
+
+
+
+
+cleanEx()
+nameEx("arcdist")
+### * arcdist
+
+flush(stderr()); flush(stdout())
+
+### Name: arcdist
+### Title: Geographical distance computations
+### Aliases: arcdist
+
+### ** Examples
+
+
+  pos1 <- list(lat = c(65, 66), lon = c(-19, -20))
+  pos2 <- list(lat = c(64, 65), lon = c(-19, -20))
+  dists <- arcdist(pos1, pos2)         # pos1 and pos2 are lists of coordinates.
+  lat <- c(65, 66)
+  lon <- c(-19, -20)
+  lat1 <- c(64, 65)
+  lon1 <- c(-19, -20)
+  dists <- arcdist(lat, lon, lat1, lon1) # Input in vector format.
+
+
+
+
+cleanEx()
+nameEx("bwps")
+### * bwps
+
+flush(stderr()); flush(stdout())
+
+### Name: bwps
+### Title: Open a postscript device with the color scheme given by
+###   geoplotbwpalette. (black and white)
+### Aliases: bwps
+### Keywords: devices
+
+### ** Examples
+
+
+## Not run: 
+##D bwps(file="map1.ps",height=6,width=5) 
+##D geoplot(xlim=c(-28,-10),ylim=c(64,69))
+##D geosymbols(data,z=data$value,circles=0.2,sqrt=T)
+##D geopolygon(island,col="white")# paint white over the symbols 
+##D geolines(island) # that are inside the country.  (island) 
+##D dev.off() 
+##D 
+##D # same example in a different way.  
+##D bwps(file="map1.ps",height=6,width=5,bg="white") 
+##D geoplot(xlim=c(-28,-10),ylim=c(64,69))
+##D geosymbols(data,z=data$value,circles=0.2,sqrt=T)
+##D geopolygon(island,col=0)#col 0 is now white
+##D geolines(island) # was transparent earlier
+##D dev.off() 
+## End(Not run)
+
+
+
+
+cleanEx()
+nameEx("circle.one.point")
+### * circle.one.point
+
+flush(stderr()); flush(stdout())
+
+### Name: circle.one.point
+### Title: Find a circle around a point
+### Aliases: circle.one.point
+### Keywords: hplot
+
+### ** Examples
+
+
+## draws a circle around Iceland
+geoplot()
+geolines(circle.one.point(65,-19,150,n=50),lwd=3,col="red")
+
+
+
+
+cleanEx()
+nameEx("colps")
+### * colps
+
+flush(stderr()); flush(stdout())
+
+### Name: colps
+### Title: Open a postscript device with the color scheme given by
+###   geoplotpalette.
+### Aliases: colps
+### Keywords: <!--Put here--> more one or s-keyword tags
+
+### ** Examples
+
+
+## Not run: 
+##D colps(file="map1.ps",height=6,width=5) 
+##D geoplot(xlim=c(-28,-10),ylim=c(64,69))
+##D geosymbols(data,z=data$value,circles=0.2,sqrt=T)
+##D geopolygon(island,col="white")# paint white over the symbols 
+##D geolines(island) # that are inside the country.  (island) 
+##D dev.off() 
+##D 
+##D # same example in a different way.  
+##D colps(file="map1.ps",height=6,width=5,bg="white") 
+##D geoplot(xlim=c(-28,-10),ylim=c(64,69))
+##D geosymbols(data,z=data$value,circles=0.2,sqrt=T)
+##D geopolygon(island,col=0)#col 0 is now white
+##D geolines(island) # was transparent earlier
+##D dev.off() 
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("d2ir")
+### * d2ir
+
+flush(stderr()); flush(stdout())
+
+### Name: d2ir
+### Title: Convert between Geographic Coordinates and ICES Rectangles
+### Aliases: d2ir ir2d
+### Keywords: arith manip
+
+### ** Examples
+
+
+d2ir(54.25, 3.5)
+d2ir(c(50,60), c(-20,-10))
+
+ir2d(d2ir(54, 3))
+## center positions for bottom left and approx top right rects
+ir2d("01A0")
+ir2d("99M7")
+ir2d(c("01A0","99M7"))
+## note that ICES CM1977/Gen:3 indicates half-size rects on eastern margin!
+
+
+
+
+cleanEx()
+nameEx("deg2rect")
+### * deg2rect
+
+flush(stderr()); flush(stdout())
+
+### Name: deg2rect
+### Title: Given position return rectangle code.
+### Aliases: deg2rect d2r d2sr d2mr d2dr
+### Keywords: arith manip
+
+### ** Examples
+
+
+
+## tally positions in rectangles in object \code{island} giving
+## Iceland's coastline
+
+data(island)
+rects <- d2r(island)
+table(rects)
+
+
+
+
+
+cleanEx()
+nameEx("eyjar")
+### * eyjar
+
+flush(stderr()); flush(stdout())
+
+### Name: eyjar
+### Title: Icelandic islands
+### Aliases: eyjar
+### Keywords: datasets
+
+### ** Examples
+
+
+data(eyjar)
+# islands in the Breidafjordur region
+geoplot(xlim = list(lat = c(64.85, 65.65), lon = c(-24.6, -21.7)),
+  country = bisland, grid = FALSE)
+geolines(eyjar, col = "magenta")
+## maybe str(eyjar) ; plot(eyjar) ...
+
+
+
+
+cleanEx()
+nameEx("fill.outside.border")
+### * fill.outside.border
+
+flush(stderr()); flush(stdout())
+
+### Name: fill.outside.border
+### Title: Fills space outside the border of a plot.
+### Aliases: fill.outside.border
+### Keywords: <!--Put here--> more one or s-keyword tags
+
+### ** Examples
+
+
+       ## Not run: 
+##D 	geoplot(xlim=c(-50,20),ylim=c(50,70))       # Initialize plot.
+##D        geoworld(fill=T,color=120)                  # Colour countries.
+##D        fill.outside.border()                       # Clear outside of border.
+##D        geoplot(xlim=c(-50,20),ylim=c(50,70),new=T) # Relabel.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("frame2gpx")
+### * frame2gpx
+
+flush(stderr()); flush(stdout())
+
+### Name: frame2gpx
+### Title: Convert latlon data frame to gpx file.
+### Aliases: frame2gpx
+### Keywords: manip
+
+### ** Examples
+
+
+## Not run: 
+##D # some positions
+##D pos <- rPeri(323)
+##D frame2gpx(pos)
+##D system("more tmp.gpx")
+##D system("rm tmp.gpx")
+## End(Not run)
+
+
+
+
+cleanEx()
+nameEx("gbdypi.100")
+### * gbdypi.100
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypi.100
+### Title: GEBCO 100 m isobath in the N-Atlantic.
+### Aliases: gbdypi.100
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypi.100)
+## maybe str(gbdypi.100) ; plot(gbdypi.100) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypi.1000")
+### * gbdypi.1000
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypi.1000
+### Title: GEBCO 1000 m isobath in the N-Atlantic.
+### Aliases: gbdypi.1000
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypi.1000)
+## maybe str(gbdypi.1000) ; plot(gbdypi.1000) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypi.200")
+### * gbdypi.200
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypi.200
+### Title: GEBCO 200 m isobath in the N-Atlantic.
+### Aliases: gbdypi.200
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypi.200)
+## maybe str(gbdypi.200) ; plot(gbdypi.200) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypi.500")
+### * gbdypi.500
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypi.500
+### Title: GEBCO 500 m isobath in the N-Atlantic.
+### Aliases: gbdypi.500
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypi.500)
+## maybe str(gbdypi.500) ; plot(gbdypi.500) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypi.800")
+### * gbdypi.800
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypi.800
+### Title: GEBCO 800 m isobath in the N-Atlantic.
+### Aliases: gbdypi.800
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypi.800)
+## maybe str(gbdypi.800) ; plot(gbdypi.800) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypif.200")
+### * gbdypif.200
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypif.200
+### Title: GEBCO 200 m isobath around Iceland.
+### Aliases: gbdypif.200
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypif.200)
+## maybe str(gbdypif.200) ; plot(gbdypif.200) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypif.400")
+### * gbdypif.400
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypif.400
+### Title: GEBCO 400 m isobath around Iceland.
+### Aliases: gbdypif.400
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypif.400)
+## maybe str(gbdypif.400) ; plot(gbdypif.400) ...
+
+
+
+
+cleanEx()
+nameEx("gbdypif.500")
+### * gbdypif.500
+
+flush(stderr()); flush(stdout())
+
+### Name: gbdypif.500
+### Title: GEBCO 500 m isobath around Iceland.
+### Aliases: gbdypif.500
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gbdypif.500)
+## maybe str(gbdypif.500) ; plot(gbdypif.500) ...
+
+
+
+
+cleanEx()
+nameEx("gbplot")
+### * gbplot
+
+flush(stderr()); flush(stdout())
+
+### Name: gbplot
+### Title: GEBCO plot. Plots equidepth lines.
+### Aliases: gbplot
+
+### ** Examples
+
+
+   geoplot()   # Set up plot.
+   
+   gbplot(c(100,500,1000),depthlab=T,depthlabcex=0.2)
+   # Plot depthlines for 100,500,1000,1500 m, showing the
+   # depth on the line.   
+
+
+
+
+cleanEx()
+nameEx("geoSR")
+### * geoSR
+
+flush(stderr()); flush(stdout())
+
+### Name: geoSR
+### Title: Plot Squares in Different Colors
+### Aliases: geoSR
+### Keywords: hplot spatial
+
+### ** Examples
+
+
+# Use existing palette
+geoSR(561:560, c(0.3,3), levels=c(0,1,10))
+
+# Pass colors along with levels
+lev <- c(0, 1, 10)
+names(lev) <- c("brown", "orange", NA)
+geoSR(561:560, c(0.3,3), lev)
+
+# Subsquares
+geoSR(5611:5612, c(0.3,3), lev)
+
+# Color ramp
+z <- (0:10) / 10
+lev <- (0:10) / 10
+ramp <- colorRampPalette(c("khaki1","gold","orange","darkorange2","red",
+                           "darkred","black"))
+names(lev) <- ramp(length(lev))
+geoSR(724:715, z, lev)
+
+
+
+
+cleanEx()
+nameEx("geoarea")
+### * geoarea
+
+flush(stderr()); flush(stdout())
+
+### Name: geoarea
+### Title: Calculates the area of a given region.
+### Aliases: geoarea
+
+### ** Examples
+
+
+         geoarea(island)         # Calculates the area of Iceland up to 
+                                 # an with default precision.
+
+         geoarea(island,10000)   # Calculates the area of Iceland up to 
+                                 # an adiquite precision.
+
+#         geoarea(geodefine(),10) # Calculates the area of a region specified 
+                                 # by the user.
+
+
+
+
+cleanEx()
+nameEx("geochull")
+### * geochull
+
+flush(stderr()); flush(stdout())
+
+### Name: geochull
+### Title: Convex hull of a set of positions
+### Aliases: geochull
+### Keywords: manip
+
+### ** Examples
+
+
+# draws the convex hull of Iceland's coastline.
+geoplot()
+geolines(geochull(island))
+
+
+
+
+cleanEx()
+nameEx("geocontour")
+### * geocontour
+
+flush(stderr()); flush(stdout())
+
+### Name: geocontour
+### Title: Plots contour lines.
+### Aliases: geocontour
+
+### ** Examples
+
+
+     ###################################################
+     # Example l                                       #
+     ###################################################  
+## Not run: 
+##D      geoplot(deg, cont = TRUE)                        # Plot initialized.
+##D      geocontour(grd$lat,grd$lon,z,nlevels = 10,
+##D                 neg = FALSE,reg = reg,colors = TRUE)          # Contour plot.
+##D      geoplot(deg,pch = " ",cont = TRUE,new = TRUE)           # Plot over contourplot.
+## End(Not run)
+     ###################################################
+     # Example 2 Sea Tempeture.                        #
+     ###################################################  
+      
+     # The following data names used are in Icelandic, stodvar means
+     # stations and botnhiti means temperature.
+
+     geoplot()
+     gbplot(500)
+     grd <- list(lat = seq(63,67,length = 30),
+                 lon = seq(-28,-10,length = 50))
+     labloc <- list(lat = c(63.95,65.4),lon = c(-19.8,-17.3))
+
+     grd1 <- geoexpand(grd)                       # Make grid.
+     grd2 <- geoinside(grd1,gbdypif.500)  
+     grd2 <- geoinside(grd2,island,robust = FALSE,option = 2) 
+     # Use only the points where depth < 500 and outside Iceland.
+## Not run: 
+##D      #xx <- loess(botnhiti~ lat*lon,degree = 2,spaALSEn = 0.25,
+##D      #            data = stodvar, na.action = na.omit)
+##D      # Use loess for interpolating.
+##D 
+##D      #grd2$temp <- predict(xx,grd2)                
+##D      #geocontour(grd2,z = grd2$temp,levels = c(0,1,2,3,4,5,6,7),
+##D      #           label.location = labloc)
+##D 
+##D      ######################################################
+##D      # Example 3 example of gam() and indexes.            #
+##D      ###################################################### 
+##D 
+##D      stations<-data.frame(lat = stodvar$lat,lon = stodvar$lon,
+##D                           temp = stodvar$botnhiti)
+##D      # Making a partial data.frame from a big one called stodvar,
+##D      # which means stations in Icelandic.
+##D 
+##D      stations[1:5,]             # Show first 5 lines all columns
+##D                                 # in stations.
+##D      dim(stations)              # Length of (lines,colums).
+##D      dim(stations[!is.na(stations$temp),])      # Without NAs.
+##D      my.data <- stations[!is.na(stations$temp),]
+##D      my.data <- my.data[!is.na(my.data$lat),]
+##D      my.data <- my.data[!is.na(my.data$lon),]
+##D      # my.data is now same as stations but witout NAs in lat,
+##D      # lon and temp.
+##D        
+##D      pred.grid <- list(lat = seq(63.25,67.25,length = round((67.25-63.25+1)*8)),
+##D                        lon = seq(-27,-11.5,length = round((27-11.5+1)*4)))
+##D      pred.grid <- geoexpand(pred.grid)
+##D      # Making a grid to fit our area of interest.
+##D      pred.grid <- geoinside(pred.grid,gbdypif.500)
+##D      # Points within 500m.
+##D      pred.grid <- geoinside(pred.grid,island,robust = FALSE,option = 2)
+##D      # Points outside  of Iceland.
+##D      
+##D      geoplot(grid = FALSE)
+##D      my.data <- geoinside(my.data,island,robust = FALSE,option = 2)
+##D      geopoints(my.data,pch = ".")
+##D 
+##D      fit <- gam(temp~lo(lat,lon,span = 0.1),data = my.data)
+##D      # see help(gam)
+##D      # can also do:
+##D      # fit <- loess(temp~lon*lat,data = my.data,span = 0.1)
+##D      # fit <- gam(temp~ns(lon,df = 7)*ns(lat,df = 5),data = my.data) 
+##D 
+##D      pred.grid$pred.temp <- predict(fit,newdata = pred.grid)
+##D      geocontour(pred.grid,z = pred.grid$pred.temp,levels = 0:7,
+##D                 label.location = labloc)
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geocontour.fill")
+### * geocontour.fill
+
+flush(stderr()); flush(stdout())
+
+### Name: geocontour.fill
+### Title: geocontour.fill plots colored or black and white contours on a
+###   graph made by geoplot.
+### Aliases: geocontour.fill
+
+### ** Examples
+
+
+## Not run: 
+##D   ######################################################
+##D   # Example 1.                                         #
+##D   ######################################################
+##D 
+##D   # Need the data.frame botnv.2004 to be able to compile this
+##D   # example, if not attached use: 
+##D   # >attach("/usr/local/reikn/Splus5/Aflaskyrslur/Data")
+##D 
+##D   codgrd <-list(lat = seq(62, 68, by = 0.1), lon = seq(-30, -9, by = 0.25))
+##D   # A grid is made.
+##D   lab.loc<-list(lat = c(63.9, 65.6), lon = c(-20.75, -16.5)) 
+##D   # Location of the label.
+##D 
+##D   tmp <- combine.rt(botnv.2004$lat, botnv.2004$lon,
+##D                     botnv.2004$torskur, codgrd, fun = "sum", fill = TRUE)
+##D   # The data is read into the grid with combine.rt.
+##D 
+##D   tmp$z <- tmp$z/(cos(tmp$lat*pi/180)*0.1*60*0.25*60)
+##D   # Data changed.(from being in
+##D   # kilos per box to kilos per square mile).
+##D 
+##D   vg <- list(nugget = 0.1, sill = 1, range = 50)
+##D   # Parameters for the variogram
+##D 
+##D   z <- pointkriging(tmp$lat, tmp$lon, tmp$z, codgrd, vg,  
+##D                     maxnumber = 80, maxdist = 30, set = -1) 
+##D   # Dataset smoothened with pointkriging.
+##D 
+##D   geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE, axlabels = TRUE, type = "n")
+##D   # Plot initialized
+##D   level = c(160, 200, 320, 500, 700, 1000, 2000, 3000, 4000, 5000, 6000)
+##D   # Levels for geocontour.fill
+##D 
+##D   geocontour.fill(codgrd, z, levels = level, white = TRUE      # Plot the data.
+##D                 , working.space = 300000)
+##D 
+##D   geopolygon(island)
+##D   # Contourlines inside Iceland overwritten.
+##D   geolines(island)
+##D   # Iceland redrawn with geolines.
+##D 
+##D   geocontour.fill(codgrd, z, levels = level, white = TRUE, 
+##D                   label.location = lab.loc, labels.only = TRUE)
+##D   # Call geocontour.fill again only to plot the labels.
+##D 
+##D   #########################################################
+##D   # Example 2.                                            #
+##D   #########################################################
+##D 
+##D   
+##D   # Preperation for pointkriging    
+##D   # th4.2002 is the data used here, dataframe [lon, lat, mat].
+##D   # >attach(?????) 
+##D   
+##D 
+##D   grd.smb <-list(lat = seq(62.8, 67.5, length = 80),   # Set up the grid.
+##D                  lon = seq(-28, -10, length = 130))
+##D   m.lev<-c(0, 0.1, 0.2, 0.3, 0.5)
+##D   # Levels for the geocontour.fill.
+##D   m.col<-c(0, 14, 59, 104, 119, 149)
+##D   # Colors for the levels.
+##D   lab.in.island<-list(lat = c(63.9, 65.6), lon = c(-20.75, -16.5)) 
+##D   # Location of the Label
+##D 
+##D   vg <- list(nugget = 0.3, sill = 1, range = 50) 
+##D   # Initialize variogram parameters.
+##D  
+##D   zfj<-pointkriging(th4.2002$lat, th4.2002$lon, z = th4.2002$mat, 
+##D                   grd.smb, vg, maxnumber = 80, maxdist = 30, set = -1)
+##D   # Smooth the data with pointkriging.
+##D 
+##D   #
+##D   # Plotting                       
+##D   #
+##D 
+##D   par(mfrow = c(1, 1),  mai = rep(0, 4))
+##D   # Set up graphic parameters.
+##D   geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE, axlabels = FALSE, type = "n")
+##D   # Draw a background with Iceland with geoplot.
+##D 
+##D   geocontour.fill(zfj, levels = m.lev, col = m.col, working.space = 300000) 
+##D   # Plot the data with geocontour.fill.
+##D 
+##D   geopolygon(gbdypif.500, col = 0, exterior = TRUE, r = 0)
+##D   # Remove contours outside gbdypif.500.
+##D   geoplot(lat = c(63, 67.5), lon = c(-27, -11), grid = FALSE,          # Replot.
+##D           axlabels = FALSE, type = "n", new = TRUE)
+##D 
+##D   geopolygon(island, col = 43)
+##D   # Remove contours inside Iceland and color Iceland.
+##D   geocontour.fill(zfj, levels = m.lev, label.location = lab.in.island, 
+##D                   labels.only = TRUE, csi = 0.1, col = m.col, working.space = 300000)
+##D   # Call geocontour.fill to plot labels.
+##D   geolines(island)
+##D   # Redraw the lines of Iceland.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geocurve")
+### * geocurve
+
+flush(stderr()); flush(stdout())
+
+### Name: geocurve
+### Title: Smooth curves and put arrows in the beginning and end.
+### Aliases: geocurve
+
+### ** Examples
+
+
+## Not run: 
+##D        # define curve store the result.
+##D        curve1 <- geocurve(geolocator(type="p"),arrow="end",lwd=2)
+##D        # use the result.
+##D        geocurve(curve1,smooth=F,arrow="start",lwd=2,col=150)
+##D 
+##D        # define closed area and hatch it.
+##D        area1 <- geocurve(geodefine(),open=F)
+##D        geopolygon(area1,density=10,col=1)
+##D 
+##D        # Make closed curve with big arrow and not store the result.
+##D        geocurve(geodefine(),open=F,arrow="end",lwd=2,size=0.5)
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geodefine")
+### * geodefine
+
+flush(stderr()); flush(stdout())
+
+### Name: geodefine
+### Title: Defines regions.
+### Aliases: geodefine
+
+### ** Examples
+
+
+ ##   Push left mouse button to mark point, push middle button to 
+ ##   mark the end of a region.
+
+
+
+
+cleanEx()
+nameEx("geodezoom")
+### * geodezoom
+
+flush(stderr()); flush(stdout())
+
+### Name: geodezoom
+### Title: Restores a zoomed plot.
+### Aliases: geodezoom
+
+### ** Examples
+
+
+##    See examples in help(geozoom).
+   
+
+
+
+
+cleanEx()
+nameEx("geoexpand")
+### * geoexpand
+
+flush(stderr()); flush(stdout())
+
+### Name: geoexpand
+### Title: expands a grid to a dataframe.
+### Aliases: geoexpand
+
+### ** Examples
+
+
+       grd <- list(lat=seq(63,67,length=30),lon=seq(-28,-10,length=50))
+       # a list with length(lat) = 30 and length(lon) = 50
+
+       grd1<- geoexpand(grd)
+       # a 30 by 50 dataframe made.
+
+       # See also examples in geocontour.
+
+
+
+
+cleanEx()
+nameEx("geogrid")
+### * geogrid
+
+flush(stderr()); flush(stdout())
+
+### Name: geogrid
+### Title: Plots a grid.
+### Aliases: geogrid
+
+### ** Examples
+
+
+## Not run: 
+##D        geogrid(latgr, longgr)
+##D 
+##D        codgrd <- list(lat = seq(62, 68, by = 0.1), lon = seq(-28, -10, 0.25))
+##D        geogrid(codgrd)   # a fine grid of Iceland and neighbouring seas
+##D        geoplot(new = T)   
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geoidentify")
+### * geoidentify
+
+flush(stderr()); flush(stdout())
+
+### Name: geoidentify
+### Title: Identifies points on plots using lat and lon coordinates.
+### Aliases: geoidentify
+
+### ** Examples
+
+
+## Not run: 
+##D        geoidentify(stations, labels = stations$temp)
+##D        # plots the temperature in the closest measuring point.
+##D 
+##D        geoidentify(stations, atpen = FALSE) 
+##D        # plots the indece number of the station closest to
+##D        # where pointed at the stations position.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geoinside")
+### * geoinside
+
+flush(stderr()); flush(stdout())
+
+### Name: geoinside
+### Title: Finds a subset of a given set of data which is inside a given
+###   region.
+### Aliases: geoinside
+
+### ** Examples
+
+
+## Not run: 
+##D    seafishing <- geoinside(fishing,island,option=2)  
+##D    # Removes those datapoints from fishing where fishing took
+##D    # place inside Iceland (misspells).
+##D 
+##D    grd <- list(lat=c(64,64,63,63),lon=c(-23,-22,-22,-23))
+##D    ins.lat.64.63.lon.23.22 <- geoinside(fishing,grd,robust =T)  
+##D    # Extracts those points from fishing where fishing
+##D    # took place inside the given box.
+##D 
+##D 
+##D       
+##D    #######################################################
+##D    # Example                                             # 
+##D    #######################################################
+##D 
+##D    par(mfrow=c(2,1))
+##D    stations<-data.frame(lat=stodvar$lat,lon=stodvar$lon)
+##D    stations<-stations[!is.na(stations$lon),]            
+##D    stations<-stations[!is.na(stations$lat),]
+##D 
+##D    geoplot(grid=F)
+##D    geopoints(stations,pch=".",col=25)
+##D    title(main="Before geoinside")
+##D 
+##D    sea.stations <- geoinside(stations,island,option=2)
+##D    # Removes those datapoints from stations where
+##D    # measurments took place inside Iceland (misspells).        
+##D  
+##D    geoplot(grid=F) 
+##D    geopoints(sea.stations,pch=".",col=25)       
+##D    title(main="After geoinside")
+##D 
+##D    #######################################################
+##D   
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geolegend")
+### * geolegend
+
+flush(stderr()); flush(stdout())
+
+### Name: geolegend
+### Title: Put a legend on a plot in the geo series.
+### Aliases: geolegend
+
+### ** Examples
+
+
+           # The function is currently defined as
+       function(pos, legend, ...)
+       {
+                      oldpar <- par()
+                      par(geopar$gpar)
+                      on.exit(par(oldpar))
+                      xx <- Proj(pos$lat, pos$lon)
+                      legend(xx$x, xx$y, legend = legend, ...)
+       }
+
+
+
+
+graphics::par(get("par.postscript", pos = 'CheckExEnv'))
+cleanEx()
+nameEx("geolines")
+### * geolines
+
+flush(stderr()); flush(stdout())
+
+### Name: geolines
+### Title: Add lines to current plot initialized by geoplot.
+### Aliases: geolines
+### Keywords: aplot
+
+### ** Examples
+
+
+       geolines(island)                      # plot iceland.
+       geolines(island$lat, island$lon, col = 1) # same.
+
+       #######################################################
+
+       geoplot(xlim=c(0, -50), ylim=c(60, 75), projection = "Lambert")
+       # Set up a Lambert plot.
+
+       geolines(c(66, 66), c(-30, -10), nx = 50, col = 155, lwd = 2)
+       # Draw a line with colour 155 and width 2.
+
+       geopolygon(island)
+       geolines(island, col = 3, lwd = 3)
+       geolines(eyjar, col = 40)
+       geolines(faeroes, col = 40)
+       geolines(greenland, col = 3, lwd = 3)
+#       geolines(janmayen, col = 40)
+       # Plot some more countries using geolines.
+
+
+
+
+cleanEx()
+nameEx("geoplot")
+### * geoplot
+
+flush(stderr()); flush(stdout())
+
+### Name: geoplot
+### Title: Plots lat and lon coordinates using Mercator or Lambert
+###   transformation.
+### Aliases: geoplot
+
+### ** Examples
+
+
+## Not run: 
+##D Examples shown here below also include calls to the other functions
+##D in the geopackage.  Further explanations of these functions can be
+##D found in the appropriate help files.
+##D 
+##D Contour plot of haddock catch in icelandic waters based on logbooks.
+##D A color scheme
+##D where color 0 is white, 1 black and 2-150 gradually changing from
+##D white to black is used.  The data is for 6 years and is stored in a
+##D list hadcatch with 6 components.  Circles showing haddock catch in
+##D the Icelandic groundfish survey is added on top of the plot with the
+##D function geosymbols but utbrteg is a dataframe with information on all
+##D catch in the Icelandic groundfish survey (all names in Icelandic ysa
+##D means haddock and ar year).  The function bwps is a call to the
+##D postscript function with the indicated color scheme.  Designed for
+##D Splus and has to be changed for R as the color schemes there are quite
+##D different.  This applies to all the examples below.
+##D 
+##D lev <- c(0.5, 1, 2, 4, 6)
+##D col <- c(0, 30, 50, 70, 90, 150)
+##D txt <- c(1993, 1995, 2000, 2002, 2005, 2006)
+##D par(mfrow = c(3, 2));par(mex = 0.01)
+##D bwps(file = "hadcatchutbr.ps", height = 6.8, width = 6.5, horizontal = FALSE)
+##D for(i in 1:6) {
+##D  SMB.std.background(grid = FALSE, axlabels = FALSE)
+##D  geocontour.fill(hadcatch[[i]], levels = lev, col = col,
+##D     white = TRUE, working.space = 2e6)
+##D  gbplot(200)
+##D  geotext(67.3, -27.6, txt[i], csi = 0.16, adj = 0)
+##D  geopolygon(island, col = 0);geolines(island)
+##D  tmp <- utbrteg[utbrteg$ar == txt[i], ] # select the year
+##D  geosymbols(tmp, z = tmp$ysa.kg, circles = 0.2,
+##D     sqrt = TRUE, lwd = 1)# amount of haddock
+##D  geopoints(tmp, pch = 16, csi = 0.05)
+##D }
+##D dev.off()
+##D 
+##D # plot x, y data
+##D geoplot(x$x, x$y, projection = "none", type = "n")
+##D 
+##D geoplot(x, projection = "none", type = "n")
+##D # does the same thing.
+##D 
+##D # The packages maps and mapdata need to be installed
+##D # worldHires is a very detailed database of coastlines from the
+##D # package mapdata.  Could be problematic if used with fill = TRUE)
+##D # Allowed.size is the maximum allowed size of polygons.
+##D library(map) # world coastlines and programs
+##D library(mapdata) # more detailed coastlines
+##D geoplot(xlim = c(20, 70), ylim = c(15, 34))
+##D geoworld(database = "worldHires", fill = TRUE, col = 30, allowed.size = 30000)
+##D 
+##D geoplot(xlim = c(20, 70), ylim = c(15, 34), dlat = 10, dlon = 10)
+##D geoworld(database = "world", fill = TRUE, col = 30) #
+##D 
+##D geoplot(xlim = c(-10, 70), ylim = c(71, 81), b0 = 80,
+##D   dlat = 2, dlon = 10) # 0 must be high here else
+##D geoworld(database = "world", fill = TRUE, col = 30) #the plot fails.
+##D 
+##D # Lambert projection,
+##D geoplot(xlim = c(-10, 70), ylim = c(71, 81),
+##D   dlat = 2, dlon = 10, projection = "Lambert")
+##D geoworld(database = "world", fill = TRUE, col = 30)
+##D 
+##D # Lambert projection, get the axis closer with the mgp command
+##D par(mgp = c(2, 0, 0))
+##D geoplot(xlim = c(-10, 70), ylim = c(71, 81),
+##D   dlat = 2, dlon = 10, projection = "Lambert", cex = 1.1)
+##D geoworld(database = "world", fill = TRUE, col = 30)
+##D 
+##D # Example with capelin data.  (lodna meanns capelin).  lodna.2 is a
+##D # data.frame with components lat,  lon and z.
+##D geoplot(lodna.2, type = "l")
+##D geopoints(lodna.2)
+##D geosymbols(lodna.2, z = lodna.2$z, colplot = TRUE,
+##D   parbars = 0.05, levels = vor.levels, label.location = labloc)
+##D 
+##D 
+##D geoplot(lodna.2, type = "l")
+##D  geosymbols(lodna.2, z = lodna.2$z, perbars = 0.1)
+##D 
+##D geoplot(lodna.2, type = "l")
+##D  geosymbols(lodna.2, z = log(1+lodna.2$z), perbars = 0.1)
+##D 
+##D 
+##D limits <- list(lat = c(63, 68), lon = c(-30, -10))
+##D geoplot(xlim = limits, type = "n", grid = FALSE, axlabels = TRUE, plot = FALSE)
+##D tmp <- geoexpand(lodna.2.grd) # expand the grid
+##D # has defined ther area vor.area and data outside it are set  to NA.
+##D i <- geoinside(tmp, vor.area.new, option = 0)
+##D zgr <- z.lodna.2;zgr[-i] <- NA
+##D geocontour.fill(lodna.2.grd, z = zgr, white = TRUE,
+##D   label.location = labloc, levels = vor.levels)
+##D geoplot(xlim = limits, type = "n", grid = FALSE, axlabels = TRUE, new = TRUE)
+##D #geolines(lodna.2, lwd = 1)
+##D gbplot(c(200, 500)) # Depth contours.
+##D 
+##D # make a plot of number within a square, calculate the total number of
+##D #cod (torskur) within a square (reitur) and put the text number of
+##D #square and total number of cod in the center of the square (number of
+##D #cod below number of square).  Apply.shrink is similar to tapply
+##D #returning the data in different form and is included with the geo library
+##D 
+##D geoplot(island, r = 1.2, type = "n", reitur = TRUE)
+##D x <- apply.shrink(data$torskur.stk, data$reitur, sum,
+##D   names = c("reitur", "torskur.stk"))
+##D x1 <- r2d(x$reitur)
+##D geotext(x1, z = paste(x$reitur, round(x$torskur.stk, 1), sep = "\n"))
+##D 
+##D # Plot filled circles.  The color scheme used is the same as described
+##D # color 0 white, 1 black and 2 - 155 white-black see bwps
+##D # in geosymbols the argument color means size (in inches)
+##D # when the fill.circles = TRUE.  The data used  AfliBySquareMonthYear have
+##D # the columns year, month , square and catch.
+##D # the function r2d changes square (reitur in Icelandic) to position
+##D # Text is put in the middle of the circles where catch exceeds 1000
+##D # tonnes.
+##D 
+##D my.colors = c(0.004, 0.04, 0.1, 0.15, 0.20, .25, 100)
+##D lev <- c(0.2, 2, 7.5, 10, 20, 50)
+##D 
+##D yy <- c(1932:1939)
+##D tmp4 <- AfliBySquareMonthYear
+##D tmp4$catch <- tmp4$catch/1000
+##D for (ar in yy) {
+##D   bwps(file = paste(ar, ".ps", sep = ""))
+##D   par(omi = c(0, 0, 0, 2))
+##D   par(mfrow = c(4, 3))
+##D   par(mex = 0.01)
+##D 
+##D   for(man in 1:12){
+##D     tmp1 <- tmp4[tmp4$year == ar & tmp4$month == man, ]
+##D     SMB.std.background(axlabels = FALSE, country = "none", plotit = FALSE)
+##D     if(nrow(tmp1) > 0) {
+##D       tmp2 <- apply.shrink(tmp1$catch, tmp1$square, sum,
+##D         names = c("square", "catch"))
+##D       tmp2 <- tmp2[order(-tmp2$catch), ]
+##D 
+##D       tmp3 <- data.frame(r2d(tmp2$square))
+##D       geosymbols(tmp3, z = tmp2$catch, fill.circles = TRUE, col = 60,
+##D         levels = lev, colors = my.colors, bordercol = 0, border = TRUE)
+##D       geopolygon(island, col = 30)
+##D       geolines(eyjar, lwd = 3, col = 30)
+##D       j <- tmp2$catch > 1
+##D       if(any(j)) {
+##D         tmp3 <- tmp3[j, ]
+##D         tmp2 <- tmp2[j, ]
+##D         geotext(lat = tmp3$lat, lon = tmp3$lon, z = tmp2$catch,
+##D           angle = 45, csi = 0.1)
+##D       }
+##D       geotext(lat = c(65.2), lon = (-18), z = paste(month.abb[man],
+##D         round(sum(tmp2$catch, na.rm = TRUE)), sep = "\n"), csi = 0.2)
+##D     }
+##D     else {geotext(lat = c(65.2), lon = (-18),
+##D             z = paste(month.abb[man], "0", sep = "\n"), csi = 0.2)}
+##D   }
+##D   geotext(63, -10, ar, adj = 1, csi = 0.18)
+##D   dev.off()
+##D }
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geopoints")
+### * geopoints
+
+flush(stderr()); flush(stdout())
+
+### Name: geopoints
+### Title: Adds points on plots initialized by geoplot.
+### Aliases: geopoints
+
+### ** Examples
+
+
+## Not run: 
+##D        geopoints(deg)                  # Plots * in the points
+##D                                                 # defined by deg$lat,deg$lon.
+##D 
+##D        geopoints(deg$lat,deg$lon,pch="*",col=5) # Same but uses color 5.
+##D 
+##D        geopoints(fd$x,fd$y)                     # Points in x,y when
+##D                                                 # projection in geoplot
+##D                                                 # was "none".
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geopolygon")
+### * geopolygon
+
+flush(stderr()); flush(stdout())
+
+### Name: geopolygon
+### Title: Fill an area.
+### Aliases: geopolygon
+
+### ** Examples
+
+
+## Not run: 
+##D      geopolygon(island)              # Paint iceland with 
+##D                                      # color #0 (often white).
+##D 
+##D      geopolygon(island, col = 0, exterior = TRUE)
+##D 
+##D      geopolygon(geolocator(), col = 1)  # Paints a region defined 
+##D                                      # by pointing on map black.
+##D 
+##D      # Of the maps available island (iceland) is about the only that
+##D      # is correctly defined as closed polygon so it is the only one that 
+##D      # can be painted by geopolygon.
+##D 
+##D      geoplot(grid = FALSE, type = "n")
+##D      # Star by setting up the plot.
+##D      geopolygon(gbdypif.500, col = 4, exterior = FALSE, r = 0)
+##D      # Use geopolygon to draw the 500 m area. 
+##D      geopolygon(gbdypif.100, col = 155, exterior = FALSE, r = 0)
+##D      # Draw 100 m are over the 500 m. 
+##D      geolines(eyjar, col = 115)
+##D      # Add islands around Iceland.
+##D      gbplot(c(100, 500), depthlab = TRUE)
+##D      # Draw the depth lines, labels on lines.
+##D      geopolygon(island, col = 115, outside = TRUE, r = 0)
+##D      # Draw Iceland over.
+##D      geoplot(grid = FALSE, new = TRUE)
+##D      # Draw lines around Iceland, could also use geolines.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geosubplot")
+### * geosubplot
+
+flush(stderr()); flush(stdout())
+
+### Name: geosubplot
+### Title: Adds a plot to an existing plot initialized by geoplot.
+### Aliases: geosubplot
+
+### ** Examples
+
+
+## Not run: 
+##D       #####################################################
+##D       # Example 1                                         #
+##D       #####################################################
+##D 
+##D       geoplot()
+##D       pos<- list(lat = 63.5,lon=-11.75)
+##D       geosubplot(geoplot(faeroes,pch=" ",country =faeroes,new=T)
+##D                  ,pos,fill=T)
+##D       # Plots the Faeroes on a plot with Iceland. Be sure to
+##D       # use new = T if geoplot is called again.
+##D 
+##D       #####################################################
+##D       # Example 2                                         #
+##D       #####################################################
+##D 
+##D       geoplot()
+##D       large.geopar <- geopar             # Parameters saved.
+##D       pos <- list(lat=c(63,64),lon=c(-27,-24))
+##D       geosubplot(geoplot(island, new=T,grid=F,type="l"),pos)
+##D 
+##D       geotext(65,-18,"subplot")           # Text on subplot.
+##D       small.geopar <- geopar # Parameters for subplot saved.
+##D 
+##D       # geopar <- large.geopar       # Make big plot active.
+##D       # Unless you are working directly with the .Data dir of the
+##D       # geolibrary this assignment will not work, must use:
+##D       assign("geopar",large.geopar,where=0)
+##D 
+##D       geotext(65,-18,"Big plot")         # Text on big plot.
+##D 
+##D       # Another subplot.
+##D 
+##D       pos <- list(lat=c(63,64),lon=c(-17,-14))
+##D       geosubplot(geoplot(island,new=T,grid=F,type="l"),pos,fill=T)
+##D       # Another subplot drawn.
+##D       geotext(65,-18,"subplot # 2")
+##D 
+##D       small.geopar.2 <- geopar # parameters for subplot # 2 saved.
+##D       # geopar <- large.geopar # Big plot made active again
+##D       # Same as above, instead use:
+##D       assign("geopar",large.geopar,where=0)
+##D 
+##D       # See also similar example in geopar.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geosymbols")
+### * geosymbols
+
+flush(stderr()); flush(stdout())
+
+### Name: geosymbols
+### Title: Plot different kinds of symbols at the data points.
+### Aliases: geosymbols
+### Keywords: aplot
+
+### ** Examples
+
+
+ ## Not run: 
+##D      # lodna.2 composes of echo measurements for capelin on the
+##D       # norther- and easternshores of Iceland. [lat, lon, z]
+##D 
+##D       # Show points.
+##D 
+##D       geoplot(lodna.2, type = "l", grid = FALSE)   # Begin by plotting Iceland.
+##D       geopoints(lodna.2, pch = "*", col = 150)     # See where the points are.
+##D 
+##D       ####################################
+##D       # Example 1, color parbars plot.   #
+##D       ####################################
+##D 
+##D       geoplot(lodna.2, type = "l", grid = TRUE)     # Begin by plotting Iceland.
+##D       levels = c(0, 20, 50, 100, 500, 1000)
+##D 
+##D       geosymbols(lodna.2, z = lodna.2$z, colplot = TRUE, colors = seven.col,
+##D                  levels = levels, parbars = 0.05, colors = seven.col,
+##D                  label.location = "locator")
+##D 
+##D       # "locator" click twice on the map where you want the contour index.
+##D       # Indicate firstly the upper left corner position then lower right.
+##D 
+##D       #######################################
+##D       # Example 2, black/white perbars plot.#
+##D       #######################################
+##D 
+##D       geoplot(lodna.2, type = "l", grid = FALSE)
+##D 
+##D       geosymbols(lodna.2, z = lodna.2$z, perbars = 0.1)
+##D 
+##D       # Bars perpendicular to measurement direction
+##D 
+##D       #######################################
+##D       # Example 3, Color Dots.              #
+##D       #######################################
+##D 
+##D       # Set up data.
+##D       attach("/usr/local/reikn/SplusNamskeid")
+##D       i<-utbrteg$ar == 2004
+##D 
+##D       # Set up the plot.
+##D       geoplot()
+##D       levels = c(10, 100, 500)
+##D       colors = c(13, 55, 111, 153)
+##D       labloc<-list(lat = c(63.95, 65.4), lon = c(-19.8, -17.3))
+##D 
+##D       geosymbols(utbrteg[i, ], z = utbrteg[i, "torskur.kg"], circles = 0.05,
+##D                  sqrt = TRUE, colplot = TRUE, levels = levels, colors = colors,
+##D                  label.location = labloc)
+##D 
+##D 
+##D       #######################################
+##D       # Example 4, Rings around points.     #
+##D       #######################################
+##D 
+##D       # Having done the set up data and plot in Example 3.
+##D 
+##D       geoplot(utbrteg$lat, utbrteg$lon, pch = ".")
+##D       geosymbols(utbrteg[i, ], z = utbrteg[i, "torskur.kg"], circles = 0.2,
+##D                  sqrt = TRUE, label.location = labloc)
+##D 
+##D       # Circles can be replaced with squares, rectangles, vbars, hbars or
+##D       # perbars or more than one used simultanuously.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("geotext")
+### * geotext
+
+flush(stderr()); flush(stdout())
+
+### Name: geotext
+### Title: Plots text on a drawing defined by geoplot.
+### Aliases: geotext
+
+### ** Examples
+
+geoplot()
+deg <- data.frame(lon = rnorm(10,-27,1.3),lat = rnorm(10,65,0.6))
+z <- letters[1:10]
+geotext(deg,z=z)    # plot text at points deg$lat,deg$lon
+       
+       geotext(deg$lat,deg$lon,z,csi=0.06) # Same, size of text 0.06".
+ 
+ x <- deg
+ names(x) <- c('y','x')
+ x$z <- z
+       geotext(x$x,x$y,x$z,aftertext="km",pretext="distance")
+       # If geopar$projection="none"
+       
+       geotext(x$x,x$y,z=x$z,aftertext=" km",pretext="distance",angle = 90) 
+       # Same text written vertically.
+
+
+       ###############################################################
+       #  Example                                                    #
+       ###############################################################
+
+       lon <- rnorm(10,-27,1.3)
+       lat <- rnorm(10,65,0.6)
+       # Make a normal dist. random set of 10 points.
+
+       geoplot(lat=lat,lon=lon,grid=FALSE,xlim=c(-22,-30),ylim=c(63,67))
+       # Plot the random data points.
+       
+       geopolygon(island,col=115,exterior=TRUE)
+       geolines(island)
+       # Color Iceland. Use litir(number) to see colour scheme. 
+       # Sharpen lines around Iceland.
+
+       num <- 1:10
+       lab <- paste("Nr.",num,sep="")
+       # Make string vector with "Nr.1".."Nr.10" for geotext.
+
+       geopoints(lat,lon,pch="*",col=5)
+       # Redraw the data in a new color the * mark at points.
+
+       geotext(lon=lon,lat=lat,z=lab,col=155)
+       # With geotext we put one element from lab at each data point.
+       title(main="10 Random Data Point")
+       # Add title
+
+
+
+
+cleanEx()
+nameEx("geoworld")
+### * geoworld
+
+flush(stderr()); flush(stdout())
+
+### Name: geoworld
+### Title: Plots rough outline of the world.
+### Aliases: geoworld
+
+### ** Examples
+
+
+   geoplot(xlim = c(0, -53), ylim = c(53, 75))
+     geoworld()
+
+     # Should plot in all countries who intersect the plot draw
+     # with geoplot.
+
+# The packages maps and mapdata need to be installed
+# worldHires is a very detailed database of coastlines from the 
+# package mapdata.  Could be problematic if used with fill = TRUE)
+# Allowed.size is the maximum allowed size of polygons.  
+library(maps) # world coastlines and programs 
+library(mapdata) # more detailed coastlines
+geoplot(xlim = c(20, 70), ylim = c(15, 34))
+geoworld(database = "worldHires", fill = TRUE, col = 30, allowed.size = 1e5)
+
+geoplot(xlim = c(20, 70), ylim = c(15, 34), dlat = 10, dlon = 10)
+geoworld(database = "world", fill = TRUE, col = 30) #
+
+geoplot(xlim = c(-10, 70), ylim = c(71, 81), b0 = 80, 
+  dlat = 2, dlon = 10) # 0 must be high here else
+geoworld(database = "world", fill = TRUE, col = 30) #the plot fails.  
+
+# Lambert projection, 
+geoplot(xlim = c(-10, 70), ylim = c(71, 81), 
+  dlat = 2, dlon = 10, projection = "Lambert")
+geoworld(database = "world", fill = TRUE, col = 30) 
+
+
+
+
+cleanEx()
+nameEx("geozoom")
+### * geozoom
+
+flush(stderr()); flush(stdout())
+
+### Name: geozoom
+### Title: Zoom into plots.
+### Aliases: geozoom
+
+### ** Examples
+
+
+    geoplot()
+    geozoom()
+    # Click with mouse as when placing legend i.e. first place the
+    # mouse where the upper left corner is supposed to be and click
+    # once, then move to where the lower right corner is supposed to
+    # be and also press once.
+    geodezoom()
+    # Return to previous plot, here geoplot().
+
+
+
+
+cleanEx()
+nameEx("gepco500")
+### * gepco500
+
+flush(stderr()); flush(stdout())
+
+### Name: gepco500
+### Title: GEBCO 500 m isobath extending around the Faroes.
+### Aliases: gepco500
+### Keywords: datasets
+
+### ** Examples
+
+
+data(gepco500)
+## maybe str(gepco500) ; plot(gepco500) ...
+
+
+
+
+cleanEx()
+nameEx("glaciers")
+### * glaciers
+
+flush(stderr()); flush(stdout())
+
+### Name: glaciers
+### Title: Outlines of Icelandic glaciers.
+### Aliases: glaciers
+### Keywords: datasets
+
+### ** Examples
+
+
+data(glaciers)
+## maybe str(glaciers) ; plot(glaciers) ...
+
+
+
+
+cleanEx()
+nameEx("greenland")
+### * greenland
+
+flush(stderr()); flush(stdout())
+
+### Name: greenland
+### Title: Outline of Greenland.
+### Aliases: greenland
+### Keywords: datasets
+
+### ** Examples
+
+
+data(greenland)
+## maybe str(greenland) ; plot(greenland) ...
+
+
+
+
+cleanEx()
+nameEx("icelandrivers")
+### * icelandrivers
+
+flush(stderr()); flush(stdout())
+
+### Name: icelandrivers
+### Title: Icelandic rivers.
+### Aliases: icelandrivers
+### Keywords: datasets
+
+### ** Examples
+
+
+data(icelandrivers)
+## maybe str(icelandrivers) ; plot(icelandrivers) ...
+
+
+
+
+cleanEx()
+nameEx("ices")
+### * ices
+
+flush(stderr()); flush(stdout())
+
+### Name: ices
+### Title: ICES Areas
+### Aliases: ices
+### Keywords: hplot spatial utilities
+
+### ** Examples
+
+
+ices()
+
+
+
+
+cleanEx()
+nameEx("inside.reg.lump")
+### * inside.reg.lump
+
+flush(stderr()); flush(stdout())
+
+### Name: inside.reg.lump
+### Title: Inside region in lumpsucker fishery
+### Aliases: inside.reg.lump
+### Keywords: manip
+
+### ** Examples
+
+
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (data) 
+{
+    if (nrow(data) > 1) 
+        tmpdata <- data[, c("lat", "lon")]
+    else tmpdata <- as.data.frame(data[, c("lat", "lon")])
+    tmpdata$area <- rep(0, nrow(tmpdata))
+    i <- 1
+    ind <- geoinside(tmpdata, reg = reg.lump[[i]], option = 0, 
+        robust = FALSE)
+    if (length(ind) > 0) 
+        tmpdata[ind, "area"] <- i
+    i <- 2
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    i <- 3
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    i <- 4
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    i <- 5
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    i <- 6
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    i <- 7
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    i <- 8
+    j <- tmpdata$area == 0
+    j1 <- c(1:length(j))
+    j1 <- j1[j == T]
+    if (length(j1) > 0) {
+        ind <- geoinside(tmpdata[j1, ], reg = reg.lump[[i]], 
+            option = 0, robust = FALSE)
+        if (length(ind) > 0) 
+            tmpdata[j1[ind], "area"] <- i
+    }
+    data$area <- tmpdata$area
+    return(data)
+  }
+
+
+
+
+cleanEx()
+nameEx("intra.point.dist")
+### * intra.point.dist
+
+flush(stderr()); flush(stdout())
+
+### Name: intra.point.dist
+### Title: Intra point/position distance
+### Aliases: intra.point.dist
+### Keywords: arith
+
+### ** Examples
+
+
+# distances along the perimeter of a statistical rectangle
+pos <- rPeri(323)
+intra.point.dist(pos)
+sum(intra.point.dist(pos))
+
+
+
+
+cleanEx()
+nameEx("nonsetpar")
+### * nonsetpar
+
+flush(stderr()); flush(stdout())
+
+### Name: nonsetpar
+### Title: Some parameter settings.
+### Aliases: nonsetpar
+### Keywords: datasets
+
+### ** Examples
+
+
+data(nonsetpar)
+## maybe str(nonsetpar) ; plot(nonsetpar) ...
+
+
+
+
+cleanEx()
+nameEx("orthproj")
+### * orthproj
+
+flush(stderr()); flush(stdout())
+
+### Name: orthproj
+### Title: Performs an orthogonal projection to a curve.
+### Aliases: orthproj
+
+### ** Examples
+
+
+       
+## Not run: 
+##D        geoplot(my.curve)     # Plot curve and initialize plot.
+##D        geocurve(geolocator(),my.curve)         # Mark points.
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("pointkriging")
+### * pointkriging
+
+flush(stderr()); flush(stdout())
+
+### Name: pointkriging
+### Title: interpolates regularly spaced data on a grid.
+### Aliases: pointkriging
+
+### ** Examples
+
+
+##      See geocontour.fill
+
+
+
+
+cleanEx()
+nameEx("postcol")
+### * postcol
+
+flush(stderr()); flush(stdout())
+
+### Name: postcol
+### Title: Old palette.
+### Aliases: postcol
+### Keywords: datasets
+
+### ** Examples
+
+
+data(postcol)
+## maybe str(postcol) ; plot(postcol) ...
+
+
+
+
+cleanEx()
+nameEx("rect2deg")
+### * rect2deg
+
+flush(stderr()); flush(stdout())
+
+### Name: rect2deg
+### Title: Given rectangle code return its center position.
+### Aliases: rect2deg r2d sr2d mr2d dr2d
+### Keywords: arith manip
+
+### ** Examples
+
+
+  r2d(d2r(lat = 65 + 1/4, lon = -19 - 1/2))
+  d2r(r2d(519))
+
+
+
+
+cleanEx()
+nameEx("rectArea")
+### * rectArea
+
+flush(stderr()); flush(stdout())
+
+### Name: rectArea
+### Title: Given rectangle code return area in square kilometers or
+###   nautical miles
+### Aliases: rectArea rA srA mrA drA
+### Keywords: arith manip
+
+### ** Examples
+
+
+  srA(7121)
+  srA(7121, "km")
+  srA(7121, "km")/1.852^2
+  srA(7121, "km")
+  rA(712)
+  srA(7121) + srA(7122) + srA(7123) + srA(7124)
+
+
+
+
+cleanEx()
+nameEx("rectGrid")
+### * rectGrid
+
+flush(stderr()); flush(stdout())
+
+### Name: rGrid
+### Title: Produce a grid of rectangles on a plot, filled with colors if
+###   desired.
+### Aliases: rGrid rgrid srgrid mrgrid drgrid
+### Keywords: hplot spatial
+
+### ** Examples
+
+
+
+geoplot(grid = FALSE)
+tmp <- island
+tmp$sr <- d2sr(island) 
+srects <- aggregate(. ~ sr, tmp, length)
+names(srects)[2] <- "count"
+srects$lev <- cut(srects$count, c(0, 1, 5, 10, 20, 50, 100))
+mycol <- heat.colors(length(unique(srects$lev)))
+srgrid(srects$sr, fill = TRUE, col = mycol[srects$lev])
+geolines(island)
+
+
+
+
+
+cleanEx()
+nameEx("rectPeri")
+### * rectPeri
+
+flush(stderr()); flush(stdout())
+
+### Name: rectPeri
+### Title: Given rectangle code return perimeter as a polygon in lat lon
+### Aliases: rectPeri rPeri srPeri mrPeri drPeri
+### Keywords: arith manip
+
+### ** Examples
+
+
+  geoplot(island, type = "n", grid = FALSE)
+  geolines(rPeri(468))
+  geolines(srPeri(4681))
+
+
+
+
+cleanEx()
+nameEx("reg.bc")
+### * reg.bc
+
+flush(stderr()); flush(stdout())
+
+### Name: reg.bc
+### Title: Bormicon regions
+### Aliases: reg.bc
+
+### ** Examples
+
+
+data(reg.bc)
+## maybe str(reg.bc) ; plot(reg.bc) ...
+
+
+
+
+cleanEx()
+nameEx("reitaplott")
+### * reitaplott
+
+flush(stderr()); flush(stdout())
+
+### Name: reitaplott
+### Title: Function that fills rectangles or sub-rectangles according to
+###   the amount of fish calculated in them.
+### Aliases: reitaplott
+
+### ** Examples
+
+
+       geoplot(reitur = TRUE)
+       reitur <- c(560, 560, 560, 560, 561, 561, 561, 561)
+       smareitur <-c(1, 2, 3, 4, 1, 2, 3, 4)
+       lab.loc <- list(lat = c(63.95, 65.4), lon = c(-19.8, -17.3))
+       z <- c(100, 200, 300, 222, 345, 453, 232, 212)
+       geopolygon(island); geolines(island)
+       reitaplott(reitur, smareitur, z, rotate = 90, label.location = lab.loc)
+       # All subsuares in square 560 and 561.
+
+
+
+
+cleanEx()
+nameEx("s2pre")
+### * s2pre
+
+flush(stderr()); flush(stdout())
+
+### Name: s2pre
+### Title: Writes out data.frame or matrix to a prelude-file.
+### Aliases: s2pre
+
+### ** Examples
+
+
+## Not run: 
+##D Within Splus:
+##D        > tmp.test.frame
+##D           tolur1     tolur2 stafir1
+##D         1     11 0.04625551       a
+##D         2     12 0.04845815       a
+##D         3     13 0.05066079      NA
+##D         4     14 0.05286344       a
+##D         5     15 0.05506608       a
+##D         6     16 0.05726872       b
+##D         7     17 0.05947137       b
+##D         8     18         NA       b
+##D         9     19 0.06387665       b
+##D        10     20 0.06607930       b
+##D        > s2pre(tmp.test.frame,file="prufa.pre",na.replace="-1")
+##D        >
+##D 
+##D        From UNIX:
+##D 
+##D        hafbitur/home/reikn/gardar/Papers/Methods95 [435] cat prufa.pre
+##D        linu_nofn       tolur1  tolur2  stafir1
+##D        ---------       ------  ------  -------
+##D        1       11      0.04625551      a
+##D        2       12      0.04845815      a
+##D        3       13      0.05066079      -1
+##D        4       14      0.05286344      a
+##D        5       15      0.05506608      a
+##D        6       16      0.05726872      b
+##D        7       17      0.05947137      b
+##D        8       18      -1      b
+##D        9       19      0.06387665      b
+##D        10      20      0.06607930      b
+##D        hafbitur/home/reikn/gardar/Papers/Methods95 [436]
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("selpos")
+### * selpos
+
+flush(stderr()); flush(stdout())
+
+### Name: selpos
+### Title: Geographical point selection.
+### Aliases: selpos
+
+### ** Examples
+
+
+## Not run: 
+##D              subs<-selpos(pos,,z>6)# Select positions where z>6
+##D 
+##D        The Function is trivially defined as
+##D        function(lat, lon = NULL, ind)
+##D        {
+##D                       if(is.null(lon)) {
+##D                            lon <- lat$lon
+##D                            lat <- lat$lat
+##D                       }
+##D                       lat <- lat[ind]
+##D                       lon <- lon[ind]
+##D                       return(lat, lon)
+##D        }
+## End(Not run)
+
+
+
+### * <FOOTER>
+###
+cleanEx()
+options(digits = 7L)
+base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+grDevices::dev.off()
+###
+### Local variables: ***
+### mode: outline-minor ***
+### outline-regexp: "\\(> \\)?### [*]+" ***
+### End: ***
+quit('no')

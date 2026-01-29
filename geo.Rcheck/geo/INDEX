@@ -1,0 +1,182 @@
+Arrow                   Add arrow to plot.
+COUNTRY.DEFAULT         Default country for 'geo'.
+Closed.curve            Closed smooth curve through positions
+Elimcomp                Parameters manipulation ?
+Open.curve              Open smooth curve through positions
+Proj                    Performs Mercator or Lambert projection of
+                        data.
+Reitur2Svaedi1to10      Allocate statistical rectangles and
+                        subrectangles to Bormicon-areas 1-10.
+Rlitir                  Display colors.
+SMB.std.background      Standard background for the SMB.
+SegmentWithArrow        Plot line segment with arrow at the end.
+Set.grd.and.z           Manipulate grid and z-values for contouring.
+adapt                   Adapts geographical positions
+adjust.grd              Adjusts grid for plot in Lambert projection.
+apply.shrink            Apply a function to a vector for a combination
+                        of categories.
+apply.shrink.dataframe
+                        Apply functions to columns in a dataframe
+arcdist                 Geographical distance computations
+bisland                 Icelandic coastline, hi-resolution
+bua                     Makes a list used in 'pointkriging'
+bwps                    Open a postscript device with the color scheme
+                        given by geoplotbwpalette. (black and white)
+circle.one.point        Find a circle around a point
+colps                   Open a postscript device with the color scheme
+                        given by geoplotpalette.
+colsymbol               Plot colored symbols
+combine.rt              Aggregate data on square grid, pad with zeros.
+                        Faster than tapply.
+currentarrows           Plot arrows and segments showing the size and
+                        direction of currents.
+cut_box.1               Cut box ?
+cut_box.2               Cut box type 2???
+cut_multipoly           Intersect or take complement (?) of polygons
+d2ir                    Convert between Geographic Coordinates and ICES
+                        Rectangles
+deg2rect                Given position return rectangle code.
+depthloc                Depth label locations.
+extract                 Extract a grid (?)
+eyjar                   Icelandic islands
+faeroes                 Coastline of Faroe Islands
+fill.matrix             Relace elements of a matrix
+fill.outside.border     Fills space outside the border of a plot.
+fill.points             Fill points (thicken)
+find.hnit               Find coordinate(s) ??
+findcut                 Find intersection or complement
+findline                Finds a line (?)
+fitspher.aut.1          Fits a super-smoother to a variogram (?)
+frame2gpx               Convert latlon data frame to gpx file.
+gbdypi                  Isobaths in the NE-Atlantic
+gbdypi.100              GEBCO 100 m isobath in the N-Atlantic.
+gbdypi.1000             GEBCO 1000 m isobath in the N-Atlantic.
+gbdypi.200              GEBCO 200 m isobath in the N-Atlantic.
+gbdypi.400              GEBCO 400 m isobath in the N-Atlantic.
+gbdypi.500              GEBCO 500 m isobath in the N-Atlantic.
+gbdypi.800              GEBCO 800 m isobath in the N-Atlantic.
+gbdypif.200             GEBCO 200 m isobath around Iceland.
+gbdypif.400             GEBCO 400 m isobath around Iceland.
+gbdypif.500             GEBCO 500 m isobath around Iceland.
+gbplot                  GEBCO plot. Plots equidepth lines.
+geo-package             Draw and Annotate Maps, Especially Charts of
+                        the North Atlantic
+geo.Split.poly          Split a polygon into a list
+geoSR                   Plot Squares in Different Colors
+geoarea                 Calculates the area of a given region.
+geoarea.old             Old method for calculating geographical area
+geoaxis                 Setup axes for a geoplot
+geochull                Convex hull of a set of positions
+geocontour              Plots contour lines.
+geocontour.fill         geocontour.fill plots colored or black and
+                        white contours on a graph made by geoplot.
+geoconvert              Convert latitude and longitude
+geoconvert.1            Convert to decimal degrees
+geoconvert.2            Convert from decimal degrees
+geocurve                Smooth curves and put arrows in the beginning
+                        and end.
+geodefine               Defines regions.
+geodezoom               Restores a zoomed plot.
+geoexpand               expands a grid to a dataframe.
+geogrid                 Plots a grid.
+geoidentify             Identifies points on plots using lat and lon
+                        coordinates.
+geoinside               Finds a subset of a given set of data which is
+                        inside a given region.
+geointersect            Find intersection of 2 polygons
+geolegend               Put a legend on a plot in the geo series.
+geolines                Add lines to current plot initialized by
+                        geoplot.
+geolines.with.arrows    Add arrowhead to plot
+geolocator              Locates points on a plot initialized by
+                        geoplot.
+geopar                  Parameters for the geo plot functions.
+geopar.std              Parameters for the geo plot functions.
+geoplot                 Plots lat and lon coordinates using Mercator or
+                        Lambert transformation.
+geoplotbwpalette        Black and white palette
+geoplotpalette          Set define a traditional geoplot-palette
+geopoints               Adds points on plots initialized by geoplot.
+geopolygon              Fill an area.
+geosubplot              Adds a plot to an existing plot initialized by
+                        geoplot.
+geosymbols              Plot different kinds of symbols at the data
+                        points.
+geotext                 Plots text on a drawing defined by geoplot.
+geotows                 Plot tows as line segments
+geoworld                Plots rough outline of the world.
+geozoom                 Zoom into plots.
+gepco500                GEBCO 500 m isobath extending around the
+                        Faroes.
+giveborder              Define regions intteractively
+glaciers                Outlines of Icelandic glaciers.
+greenland               Outline of Greenland.
+gridaxes                Set up axes for a geoplot
+gridaxes.Lambert        Set up axes for a Lambert projected geoplot
+gridpoints              Produce gridpoints over an area
+icelandrivers           Icelandic rivers.
+ices                    ICES Areas
+init                    Initiate a geoplot (??)
+inside                  Finds a subset of data inside (or outside) a
+                        region
+inside.reg.bc           Determine which bormicon (or gadget) region
+                        data belong to.
+inside.reg.bc1          Determine which bormicon (or gadget) region
+                        data belong to.
+inside.reg.lump         Inside region in lumpsucker fishery
+intra.point.dist        Intra point/position distance
+invProj                 Performs the inverse Mercator or Lambert
+                        projection of data.
+invlambert              Inverse Lambert projection
+invmerc                 Inverse Mercator Projection
+island                  Icelandic coastline.
+labels1                 Label plots
+labels2                 Label plots
+labels_line             Labels line ?
+labels_size             Label symbols of given size
+lambert                 Lambert projection
+litir                   Display palette in effect
+locdist                 Distance between two locations
+mercator                Mercator projection
+nonsetpar               Some parameter settings.
+orthproj                Performs an orthogonal projection to a curve.
+paint.window            Paint window for label?
+paint.window.x          Paint window for label ?
+pdist                   Spherical (?) distance
+pdistx                  Euclidian distance
+plot_nogrid             Grid control ?
+plot_reitnr             Plots rectangle codes
+pltgrid                 Plots grid lines
+plvar                   Plots a variogram estimated by variofit.
+pointkriging            interpolates regularly spaced data on a grid.
+postcol                 Old palette.
+pre2s                   Read prelude files
+prepare.line            Prepare a line ?
+ps                      Periodic spline
+rGrid                   Produce a grid of rectangles on a plot, filled
+                        with colors if desired.
+rect2deg                Given rectangle code return its center
+                        position.
+rectArea                Given rectangle code return area in square
+                        kilometers or nautical miles
+rectPeri                Given rectangle code return perimeter as a
+                        polygon in lat lon
+reg.bc                  Bormicon regions
+reg.lump                Lumpfish regions
+reitaplott              Function that fills rectangles or
+                        sub-rectangles according to the amount of fish
+                        calculated in them.
+s2pre                   Writes out data.frame or matrix to a
+                        prelude-file.
+selectedpar             Parameters manipulation ?
+selpos                  Geographical point selection.
+setgrid                 Produce a grid over an area
+shadeborder             Shade border ?
+shading1                Shading of geoplots?
+skipta.texta            Translate characters in column names
+spherical               Spherical??
+subplot                 Add subplot
+twohmiles               The Icelandic EEZ.
+variofit                Function that fits a model to a variogram.
+variogram               Calculates the distance between each pair of
+                        datapoints.
